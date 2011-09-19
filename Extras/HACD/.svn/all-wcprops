@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/2418/trunk/Extras/HACD
+END
+hacdICHull.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2407/trunk/Extras/HACD/hacdICHull.cpp
+END
+hacdICHull.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2404/trunk/Extras/HACD/hacdICHull.h
+END
+premake4.lua
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2418/trunk/Extras/HACD/premake4.lua
+END
+hacdVersion.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2404/trunk/Extras/HACD/hacdVersion.h
+END
+hacdHACD.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2418/trunk/Extras/HACD/hacdHACD.cpp
+END
+hacdCircularList.inl
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2404/trunk/Extras/HACD/hacdCircularList.inl
+END
+hacdGraph.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2407/trunk/Extras/HACD/hacdGraph.cpp
+END
+hacdVector.inl
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2404/trunk/Extras/HACD/hacdVector.inl
+END
+hacdHACD.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2412/trunk/Extras/HACD/hacdHACD.h
+END
+hacdCircularList.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2404/trunk/Extras/HACD/hacdCircularList.h
+END
+hacdManifoldMesh.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2407/trunk/Extras/HACD/hacdManifoldMesh.cpp
+END
+hacdGraph.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2407/trunk/Extras/HACD/hacdGraph.h
+END
+hacdVector.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2407/trunk/Extras/HACD/hacdVector.h
+END
+hacdManifoldMesh.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2404/trunk/Extras/HACD/hacdManifoldMesh.h
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2404/trunk/Extras/HACD/CMakeLists.txt
+END

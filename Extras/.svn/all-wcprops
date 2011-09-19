@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/!svn/ver/2430/trunk/Extras
+END
+premake4.lua
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2418/trunk/Extras/premake4.lua
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2053/trunk/Extras/Makefile.am
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2404/trunk/Extras/CMakeLists.txt
+END

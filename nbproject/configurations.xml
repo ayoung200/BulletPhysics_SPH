@@ -1,0 +1,2961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="79">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df name="trunk" root=".">
+      <df name="build">
+        <df name="CMakeFiles">
+          <df name="CMakeTmp">
+            <df name="CMakeFiles">
+              <df name="cmTryCompileExec.dir">
+              </df>
+            </df>
+          </df>
+          <df name="CompilerIdC">
+            <in>CMakeCCompilerId.c</in>
+          </df>
+          <df name="CompilerIdCXX">
+            <in>CMakeCXXCompilerId.cpp</in>
+          </df>
+        </df>
+        <df name="Demos">
+          <df name="AllBulletDemos">
+            <df name="CMakeFiles">
+              <df name="AppAllBulletDemos.dir">
+                <df name="__">
+                  <df name="BasicDemo">
+                  </df>
+                  <df name="Benchmarks">
+                  </df>
+                  <df name="Box2dDemo">
+                  </df>
+                  <df name="BspDemo">
+                  </df>
+                  <df name="CcdPhysicsDemo">
+                  </df>
+                  <df name="ConcaveConvexcastDemo">
+                  </df>
+                  <df name="ConcaveDemo">
+                  </df>
+                  <df name="ConcaveRaycastDemo">
+                  </df>
+                  <df name="ConstraintDemo">
+                  </df>
+                  <df name="ConvexDecompositionDemo">
+                  </df>
+                  <df name="DynamicControlDemo">
+                  </df>
+                  <df name="ForkLiftDemo">
+                  </df>
+                  <df name="GimpactTestDemo">
+                  </df>
+                  <df name="GjkConvexCastDemo">
+                  </df>
+                  <df name="RagdollDemo">
+                  </df>
+                  <df name="Raytracer">
+                  </df>
+                  <df name="SliderConstraintDemo">
+                  </df>
+                  <df name="SoftDemo">
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="BasicDemo">
+            <df name="CMakeFiles">
+              <df name="AppBasicDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="Benchmarks">
+            <df name="CMakeFiles">
+              <df name="AppBenchmarks.dir">
+              </df>
+            </df>
+          </df>
+          <df name="Box2dDemo">
+            <df name="CMakeFiles">
+              <df name="AppBox2dDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="BspDemo">
+            <df name="CMakeFiles">
+              <df name="AppBspPhysicsDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="CcdPhysicsDemo">
+            <df name="CMakeFiles">
+              <df name="AppCcdPhysicsDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="CharacterDemo">
+            <df name="CMakeFiles">
+              <df name="AppCharacterDemo.dir">
+                <df name="__">
+                  <df name="BspDemo">
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="CMakeFiles">
+          </df>
+          <df name="CollisionDemo">
+            <df name="CMakeFiles">
+              <df name="AppCollisionDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="CollisionInterfaceDemo">
+            <df name="CMakeFiles">
+              <df name="AppCollisionInterfaceDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="ConcaveConvexcastDemo">
+            <df name="CMakeFiles">
+              <df name="AppConcaveConvexCastDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="ConcaveDemo">
+            <df name="CMakeFiles">
+              <df name="AppConcaveDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="ConcaveRaycastDemo">
+            <df name="CMakeFiles">
+              <df name="AppConcaveRayCastDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="ConstraintDemo">
+            <df name="CMakeFiles">
+              <df name="AppConstraintDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="ContinuousConvexCollision">
+            <df name="CMakeFiles">
+              <df name="AppContinuousConvexCollisionDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="ConvexDecompositionDemo">
+            <df name="CMakeFiles">
+              <df name="AppConvexDecompositionDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="ConvexHullDistance">
+            <df name="CMakeFiles">
+              <df name="AppConvexHullDistanceDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="DoublePrecisionDemo">
+            <df name="CMakeFiles">
+              <df name="AppDoublePrecisionDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="DynamicControlDemo">
+            <df name="CMakeFiles">
+              <df name="AppMotorDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="ForkLiftDemo">
+            <df name="CMakeFiles">
+              <df name="AppForkLiftDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="FractureDemo">
+            <df name="CMakeFiles">
+              <df name="AppFractureDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="GenericJointDemo">
+            <df name="CMakeFiles">
+              <df name="AppGenericJointDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="GjkConvexCastDemo">
+            <df name="CMakeFiles">
+              <df name="AppLinearConvexCastDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="HeightFieldFluidDemo">
+            <df name="CMakeFiles">
+              <df name="HfFluidDemo.dir">
+                <df name="BulletHfFluid">
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="HelloWorld">
+            <df name="CMakeFiles">
+              <df name="AppHelloWorld.dir">
+              </df>
+            </df>
+          </df>
+          <df name="InternalEdgeDemo">
+            <df name="CMakeFiles">
+              <df name="AppInternalEdgeDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="MovingConcaveDemo">
+            <df name="CMakeFiles">
+              <df name="AppMovingConcaveDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="MultiMaterialDemo">
+            <df name="CMakeFiles">
+              <df name="AppMultiMaterialDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="MultiThreadedDemo">
+            <df name="CMakeFiles">
+              <df name="AppMultiThreadedDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="OpenCLClothDemo">
+            <df name="CMakeFiles">
+            </df>
+            <df name="Intel">
+              <df name="CMakeFiles">
+                <df name="AppOpenCLClothDemo_Intel.dir">
+                  <df name="__">
+                    <df name="__">
+                      <df name="SharedOpenCL">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="MiniCL">
+              <df name="CMakeFiles">
+                <df name="AppOpenCLClothDemo_Mini.dir">
+                  <df name="__">
+                    <df name="__">
+                      <df name="__">
+                        <df name="src">
+                          <df name="BulletMultiThreaded">
+                            <df name="GpuSoftBodySolvers">
+                              <df name="OpenCL">
+                                <df name="MiniCL">
+                                </df>
+                              </df>
+                            </df>
+                          </df>
+                        </df>
+                      </df>
+                      <df name="SharedOpenCL">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="NVidia">
+              <df name="CMakeFiles">
+                <df name="AppOpenCLClothDemo_NVidia.dir">
+                  <df name="__">
+                    <df name="__">
+                      <df name="SharedOpenCL">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="OpenGL">
+            <df name="CMakeFiles">
+              <df name="OpenGLSupport.dir">
+              </df>
+            </df>
+          </df>
+          <df name="ParticlesOpenCL">
+            <df name="CMakeFiles">
+            </df>
+            <df name="NVidia">
+              <df name="CMakeFiles">
+                <df name="AppParticlesOCL_Nv.dir">
+                  <df name="__">
+                    <df name="__">
+                      <df name="SharedOpenCL">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="RagdollDemo">
+            <df name="CMakeFiles">
+              <df name="AppRagdollDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="Raytracer">
+            <df name="CMakeFiles">
+              <df name="AppRaytracer.dir">
+              </df>
+            </df>
+          </df>
+          <df name="SerializeDemo">
+            <df name="CMakeFiles">
+              <df name="AppSerializeDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="SimplexDemo">
+            <df name="CMakeFiles">
+              <df name="AppSimplexDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="SliderConstraintDemo">
+            <df name="CMakeFiles">
+              <df name="AppSliderConstraintDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="SoftDemo">
+            <df name="CMakeFiles">
+              <df name="AppSoftBodyDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="ThreadingDemo">
+            <df name="CMakeFiles">
+              <df name="AppThreadingDemo.dir">
+              </df>
+            </df>
+          </df>
+          <df name="UserCollisionAlgorithm">
+            <df name="CMakeFiles">
+              <df name="AppUserCollisionAlgorithm.dir">
+              </df>
+            </df>
+          </df>
+          <df name="VectorAdd_OpenCL">
+            <df name="CMakeFiles">
+            </df>
+            <df name="NVidia">
+              <df name="CMakeFiles">
+                <df name="AppVectorAdd_NVidia.dir">
+                  <df name="__">
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="VehicleDemo">
+            <df name="CMakeFiles">
+              <df name="AppVehicleDemo.dir">
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="Extras">
+          <df name="CMakeFiles">
+          </df>
+          <df name="ConvexDecomposition">
+            <df name="CMakeFiles">
+              <df name="ConvexDecomposition.dir">
+              </df>
+            </df>
+          </df>
+          <df name="GIMPACTUtils">
+            <df name="CMakeFiles">
+              <df name="GIMPACTUtils.dir">
+              </df>
+            </df>
+          </df>
+          <df name="glui">
+            <df name="CMakeFiles">
+              <df name="GLUI.dir">
+              </df>
+            </df>
+          </df>
+          <df name="HACD">
+            <df name="CMakeFiles">
+              <df name="HACD.dir">
+              </df>
+            </df>
+          </df>
+          <df name="Serialize">
+            <df name="BulletFileLoader">
+              <df name="CMakeFiles">
+                <df name="BulletFileLoader.dir">
+                </df>
+              </df>
+            </df>
+            <df name="BulletWorldImporter">
+              <df name="CMakeFiles">
+                <df name="BulletWorldImporter.dir">
+                </df>
+              </df>
+            </df>
+            <df name="CMakeFiles">
+            </df>
+          </df>
+        </df>
+        <df name="src">
+          <df name="BulletCollision">
+            <df name="CMakeFiles">
+              <df name="BulletCollision.dir">
+                <df name="BroadphaseCollision">
+                </df>
+                <df name="CollisionDispatch">
+                </df>
+                <df name="CollisionShapes">
+                </df>
+                <df name="Gimpact">
+                </df>
+                <df name="NarrowPhaseCollision">
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="BulletDynamics">
+            <df name="CMakeFiles">
+              <df name="BulletDynamics.dir">
+                <df name="Character">
+                </df>
+                <df name="ConstraintSolver">
+                </df>
+                <df name="Dynamics">
+                </df>
+                <df name="Vehicle">
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="BulletMultiThreaded">
+            <df name="CMakeFiles">
+              <df name="BulletMultiThreaded.dir">
+                <df name="SpuNarrowPhaseCollisionTask">
+                </df>
+              </df>
+            </df>
+            <df name="GpuSoftBodySolvers">
+              <df name="CMakeFiles">
+              </df>
+              <df name="CPU">
+                <df name="CMakeFiles">
+                  <df name="BulletSoftBodySolvers_CPU.dir">
+                  </df>
+                </df>
+              </df>
+              <df name="OpenCL">
+                <df name="CMakeFiles">
+                </df>
+                <df name="Intel">
+                  <df name="CMakeFiles">
+                    <df name="BulletSoftBodySolvers_OpenCL_Intel.dir">
+                      <df name="__">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+                <df name="MiniCL">
+                  <df name="CMakeFiles">
+                    <df name="BulletSoftBodySolvers_OpenCL_Mini.dir">
+                      <df name="__">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+                <df name="NVidia">
+                  <df name="CMakeFiles">
+                    <df name="BulletSoftBodySolvers_OpenCL_NVidia.dir">
+                      <df name="__">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="BulletSoftBody">
+            <df name="CMakeFiles">
+              <df name="BulletSoftBody.dir">
+              </df>
+            </df>
+          </df>
+          <df name="CMakeFiles">
+          </df>
+          <df name="LinearMath">
+            <df name="CMakeFiles">
+              <df name="LinearMath.dir">
+              </df>
+            </df>
+          </df>
+          <df name="MiniCL">
+            <df name="CMakeFiles">
+              <df name="MiniCL.dir">
+                <df name="MiniCLTask">
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="Demos">
+        <df name="AllBulletDemos">
+          <df name="CMakeFiles">
+          </df>
+          <in>DemoEntries.cpp</in>
+          <in>DemoEntries.h</in>
+          <in>Main.cpp</in>
+        </df>
+        <df name="BasicDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>BasicDemo.cpp</in>
+          <in>BasicDemo.h</in>
+          <in>Win32BasicDemo.cpp</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="Benchmarks">
+          <df name="CMakeFiles">
+          </df>
+          <in>BenchmarkDemo.cpp</in>
+          <in>BenchmarkDemo.h</in>
+          <in>Taru.mdl</in>
+          <in>Win32BenchmarkDemo.cpp</in>
+          <in>landscape.mdl</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="Box2dDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>Box2dDemo.cpp</in>
+          <in>Box2dDemo.h</in>
+          <in>Win32Box2dDemo.cpp</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="BspDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>BspConverter.cpp</in>
+          <in>BspConverter.h</in>
+          <in>BspDemo.cpp</in>
+          <in>BspDemo.h</in>
+          <in>BspLoader.cpp</in>
+          <in>BspLoader.h</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="BulletDinoDemo">
+          <in>BulletDino.c</in>
+        </df>
+        <df name="CcdPhysicsDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>CcdPhysicsDemo.cpp</in>
+          <in>CcdPhysicsDemo.h</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="CellSpuDemo">
+          <df name="ibmsdk">
+          </df>
+          <in>BasicDemo2.cpp</in>
+          <in>BasicDemo2.h</in>
+        </df>
+        <df name="CharacterDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>CharacterDemo.cpp</in>
+          <in>CharacterDemo.h</in>
+          <in>DynamicCharacterController.cpp</in>
+          <in>DynamicCharacterController.h</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="CMakeFiles">
+        </df>
+        <df name="CollisionDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>CollisionDemo.cpp</in>
+          <in>CollisionDemo.h</in>
+        </df>
+        <df name="CollisionInterfaceDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>CollisionInterfaceDemo.cpp</in>
+          <in>CollisionInterfaceDemo.h</in>
+          <in>Win32CollisionInterfaceDemo.cpp</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="ConcaveConvexcastDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>ConcaveConvexcastDemo.cpp</in>
+          <in>ConcaveConvexcastDemo.h</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="ConcaveDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>ConcaveDemo.h</in>
+          <in>ConcavePhysicsDemo.cpp</in>
+          <in>Win32ConcaveDemo.cpp</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="ConcaveRaycastDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>ConcaveRaycastDemo.cpp</in>
+          <in>ConcaveRaycastDemo.h</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="ConstraintDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>ConstraintDemo.cpp</in>
+          <in>ConstraintDemo.h</in>
+          <in>Win32ConstraintDemo.cpp</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="ContinuousConvexCollision">
+          <df name="CMakeFiles">
+          </df>
+          <in>ContinuousConvexCollision.h</in>
+          <in>ContinuousConvexCollisionDemo.cpp</in>
+        </df>
+        <df name="ConvexDecompositionDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>ConvexDecompositionDemo.cpp</in>
+          <in>ConvexDecompositionDemo.h</in>
+          <in>Win32ConvexDecompositionDemo.cpp</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="ConvexHullDistance">
+          <df name="CMakeFiles">
+          </df>
+          <in>ConvexHullDistanceDemo.cpp</in>
+        </df>
+        <df name="CudaDemo">
+        </df>
+        <df name="DoublePrecisionDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>DoublePrecisionDemo.cpp</in>
+          <in>DoublePrecisionDemo.h</in>
+        </df>
+        <df name="DX11ClothDemo">
+          <df name="DXUT">
+            <df name="Core">
+              <in>DXUT.cpp</in>
+              <in>DXUT.h</in>
+              <in>DXUTDevice11.cpp</in>
+              <in>DXUTDevice11.h</in>
+              <in>DXUTDevice9.cpp</in>
+              <in>DXUTDevice9.h</in>
+              <in>DXUTmisc.cpp</in>
+              <in>DXUTmisc.h</in>
+            </df>
+            <df name="Optional">
+              <in>DXUTLockFreePipe.h</in>
+              <in>DXUTShapes.cpp</in>
+              <in>DXUTShapes.h</in>
+              <in>DXUTcamera.cpp</in>
+              <in>DXUTcamera.h</in>
+              <in>DXUTgui.cpp</in>
+              <in>DXUTgui.h</in>
+              <in>DXUTguiIME.cpp</in>
+              <in>DXUTguiIME.h</in>
+              <in>DXUTres.cpp</in>
+              <in>DXUTres.h</in>
+              <in>DXUTsettingsdlg.cpp</in>
+              <in>DXUTsettingsdlg.h</in>
+              <in>ImeUi.cpp</in>
+              <in>ImeUi.h</in>
+              <in>SDKmesh.cpp</in>
+              <in>SDKmesh.h</in>
+              <in>SDKmisc.cpp</in>
+              <in>SDKmisc.h</in>
+              <in>SDKsound.cpp</in>
+              <in>SDKsound.h</in>
+              <in>SDKwavefile.cpp</in>
+              <in>SDKwavefile.h</in>
+            </df>
+          </df>
+          <df name="Media">
+            <df name="Tiny">
+            </df>
+            <df name="UI">
+            </df>
+          </df>
+          <in>btDirectComputeSupport.h</in>
+          <in>cap.h</in>
+          <in>capsule.h</in>
+          <in>cloth.h</in>
+          <in>cloth_renderer.cpp</in>
+          <in>cloth_renderer_PS.hlsl</in>
+          <in>cloth_renderer_VS.hlsl</in>
+          <in>cylinder.h</in>
+          <in>resource.h</in>
+        </df>
+        <df name="DynamicControlDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>MotorDemo.cpp</in>
+          <in>MotorDemo.h</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="EPAPenDepthDemo">
+          <in>PenetrationTestBullet.cpp</in>
+        </df>
+        <df name="ForkLiftDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>ForkLiftDemo.cpp</in>
+          <in>ForkLiftDemo.h</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="FractureDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>FractureDemo.cpp</in>
+          <in>FractureDemo.h</in>
+          <in>Win32FractureDemo.cpp</in>
+          <in>btFractureBody.cpp</in>
+          <in>btFractureBody.h</in>
+          <in>btFractureDynamicsWorld.cpp</in>
+          <in>btFractureDynamicsWorld.h</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="GenericJointDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>GenericJointDemo.cpp</in>
+          <in>GenericJointDemo.h</in>
+          <in>Ragdoll.cpp</in>
+          <in>Ragdoll.h</in>
+          <in>Win32GenericJointDemo.cpp</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="GimpactTestDemo">
+          <in>BunnyMesh.h</in>
+          <in>GimpactTestDemo.cpp</in>
+          <in>GimpactTestDemo.h</in>
+          <in>TorusMesh.h</in>
+          <in>Win32GimpactDemo.cpp</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="GjkConvexCastDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>LinearConvexCastDemo.cpp</in>
+          <in>LinearConvexCastDemo.h</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="Gpu2dDemo">
+          <in>BasicDemo.cpp</in>
+          <in>BasicDemo.h</in>
+          <in>btGpuDemo2dCpuFunc.cpp</in>
+          <in>btGpuDemo2dSharedCode.h</in>
+          <in>btGpuDemo2dSharedDefs.h</in>
+          <in>btGpuDemo2dSharedTypes.h</in>
+          <in>btGpuDemoDynamicsWorld.cpp</in>
+          <in>btGpuDemoDynamicsWorld.h</in>
+          <in>btGpuDemoPairCache.cpp</in>
+          <in>btGpuDemoPairCache.h</in>
+          <in>main.cpp</in>
+          <in>oecakeLoader.cpp</in>
+          <in>oecakeLoader.h</in>
+        </df>
+        <df name="Gpu3dDemo">
+          <in>BasicDemo3d.cpp</in>
+          <in>BasicDemo3d.h</in>
+          <in>btGpuDemo3dCpuFunc.cpp</in>
+          <in>btGpuDemo3dSharedCode.h</in>
+          <in>btGpuDemo3dSharedDefs.h</in>
+          <in>btGpuDemo3dSharedTypes.h</in>
+          <in>btGpuDemoDynamicsWorld3D.cpp</in>
+          <in>btGpuDemoDynamicsWorld3D.h</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="HeightFieldFluidDemo">
+          <df name="BulletHfFluid">
+            <in>btHfFluid.cpp</in>
+            <in>btHfFluid.h</in>
+            <in>btHfFluidBuoyantConvexShape.cpp</in>
+            <in>btHfFluidBuoyantConvexShape.h</in>
+            <in>btHfFluidBuoyantShapeCollisionAlgorithm.cpp</in>
+            <in>btHfFluidBuoyantShapeCollisionAlgorithm.h</in>
+            <in>btHfFluidCollisionShape.cpp</in>
+            <in>btHfFluidCollisionShape.h</in>
+            <in>btHfFluidRigidCollisionAlgorithm.cpp</in>
+            <in>btHfFluidRigidCollisionAlgorithm.h</in>
+            <in>btHfFluidRigidCollisionConfiguration.cpp</in>
+            <in>btHfFluidRigidCollisionConfiguration.h</in>
+            <in>btHfFluidRigidDynamicsWorld.cpp</in>
+            <in>btHfFluidRigidDynamicsWorld.h</in>
+          </df>
+          <df name="CMakeFiles">
+          </df>
+          <in>HfFluidDemo.cpp</in>
+          <in>HfFluidDemo.h</in>
+          <in>HfFluidDemo_GL_ShapeDrawer.cpp</in>
+          <in>HfFluidDemo_GL_ShapeDrawer.h</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="HelloWorld">
+          <df name="CMakeFiles">
+          </df>
+          <in>HelloWorld.cpp</in>
+        </df>
+        <df name="InternalEdgeDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>InternalEdgeDemo.cpp</in>
+          <in>InternalEdgeDemo.h</in>
+          <in>Taru.mdl</in>
+          <in>Win32InternalEdgeDemo.cpp</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="MovingConcaveDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>ConcaveDemo.h</in>
+          <in>ConcavePhysicsDemo.cpp</in>
+        </df>
+        <df name="MultiMaterialDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>MultiMaterialDemo.cpp</in>
+          <in>MultiMaterialDemo.h</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="MultiThreadedDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>MultiThreadedDemo.cpp</in>
+          <in>MultiThreadedDemo.h</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="NativeClient">
+          <df name="bin_html">
+          </df>
+          <in>callback.h</in>
+          <in>cube.cc</in>
+          <in>cube.h</in>
+          <in>opengl_context.cc</in>
+          <in>opengl_context.h</in>
+          <in>opengl_context_ptrs.h</in>
+          <in>scripting_bridge.cc</in>
+          <in>scripting_bridge.h</in>
+          <in>shader_util.cc</in>
+          <in>shader_util.h</in>
+          <in>transforms.cc</in>
+          <in>transforms.h</in>
+          <in>tumbler.cc</in>
+          <in>tumbler.h</in>
+          <in>tumbler_module.cc</in>
+        </df>
+        <df name="OpenCLClothDemo">
+          <df name="AMD">
+          </df>
+          <df name="Apple">
+          </df>
+          <df name="CMakeFiles">
+          </df>
+          <df name="Intel">
+            <df name="CMakeFiles">
+            </df>
+          </df>
+          <df name="MiniCL">
+            <df name="CMakeFiles">
+            </df>
+          </df>
+          <df name="NVidia">
+            <df name="CMakeFiles">
+            </df>
+          </df>
+          <in>btOpenCLSupport.h</in>
+          <in>cl_cloth_demo.cpp</in>
+          <in>cloth.h</in>
+          <in>clstuff.cpp</in>
+          <in>clstuff.h</in>
+          <in>clstuff.hpp</in>
+          <in>gl_win.cpp</in>
+          <in>gl_win.h</in>
+          <in>gl_win.hpp</in>
+          <in>shaders.cl</in>
+        </df>
+        <df name="OpenGL">
+          <df name="CMakeFiles">
+          </df>
+          <df name="ibmsdk">
+          </df>
+          <in>DebugCastResult.h</in>
+          <in>DemoApplication.cpp</in>
+          <in>DemoApplication.h</in>
+          <in>GLDebugDrawer.cpp</in>
+          <in>GLDebugDrawer.h</in>
+          <in>GLDebugFont.cpp</in>
+          <in>GLDebugFont.h</in>
+          <in>GL_DialogDynamicsWorld.cpp</in>
+          <in>GL_DialogDynamicsWorld.h</in>
+          <in>GL_DialogWindow.cpp</in>
+          <in>GL_DialogWindow.h</in>
+          <in>GL_ShapeDrawer.cpp</in>
+          <in>GL_ShapeDrawer.h</in>
+          <in>GL_Simplex1to4.cpp</in>
+          <in>GL_Simplex1to4.h</in>
+          <in>GlutDemoApplication.cpp</in>
+          <in>GlutDemoApplication.h</in>
+          <in>GlutStuff.cpp</in>
+          <in>GlutStuff.h</in>
+          <in>RenderTexture.cpp</in>
+          <in>RenderTexture.h</in>
+          <in>Win32AppMain.cpp</in>
+          <in>Win32DemoApplication.cpp</in>
+          <in>Win32DemoApplication.h</in>
+          <in>stb_image.cpp</in>
+          <in>stb_image.h</in>
+        </df>
+        <df name="OpenPL_Demo">
+          <in>CApi.cpp</in>
+          <in>OpenPL_Demo.c</in>
+        </df>
+        <df name="ParticlesOpenCL">
+          <df name="AMD">
+          </df>
+          <df name="Apple">
+          </df>
+          <df name="CMakeFiles">
+          </df>
+          <df name="MiniCL">
+            <in>MiniCLTaskWrap.cpp</in>
+          </df>
+          <df name="NVidia">
+            <df name="CMakeFiles">
+            </df>
+          </df>
+          <in>ParticlesDemo.cpp</in>
+          <in>ParticlesDemo.h</in>
+          <in>ParticlesOCL.cl</in>
+          <in>btParticlesDemoDynamicsWorld.cpp</in>
+          <in>btParticlesDynamicsWorld.h</in>
+          <in>btParticlesSharedDefs.h</in>
+          <in>btParticlesSharedTypes.h</in>
+          <in>main.cpp</in>
+          <in>shaders.cpp</in>
+          <in>shaders.h</in>
+        </df>
+        <df name="RagdollDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>RagdollDemo.cpp</in>
+          <in>RagdollDemo.h</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="Raytracer">
+          <df name="CMakeFiles">
+          </df>
+          <in>Raytracer.cpp</in>
+          <in>Raytracer.h</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="SerializeDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>SerializeDemo.cpp</in>
+          <in>SerializeDemo.h</in>
+          <in>Win32SerializeDemo.cpp</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="SharedOpenCL">
+          <in>btOclCommon.cpp</in>
+          <in>btOclCommon.h</in>
+          <in>btOclUtils.cpp</in>
+          <in>btOclUtils.h</in>
+        </df>
+        <df name="SimplexDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>SimplexDemo.cpp</in>
+          <in>SimplexDemo.h</in>
+        </df>
+        <df name="SliderConstraintDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>SliderConstraintDemo.cpp</in>
+          <in>SliderConstraintDemo.h</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="SoftDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>SoftDemo.cpp</in>
+          <in>SoftDemo.h</in>
+          <in>bunny.inl</in>
+          <in>cube.inl</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="TerrainDemo">
+          <in>TerrainDemo.cpp</in>
+          <in>TerrainDemo.h</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="ThreadingDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>main.cpp</in>
+        </df>
+        <df name="UserCollisionAlgorithm">
+          <df name="CMakeFiles">
+          </df>
+          <in>UserCollisionAlgorithm.cpp</in>
+          <in>UserCollisionAlgorithm.h</in>
+        </df>
+        <df name="VectorAdd_OpenCL">
+          <df name="AMD">
+          </df>
+          <df name="Apple">
+          </df>
+          <df name="CMakeFiles">
+          </df>
+          <df name="MiniCL">
+          </df>
+          <df name="NVidia">
+            <df name="CMakeFiles">
+            </df>
+          </df>
+          <in>MiniCL_VectorAdd.cpp</in>
+          <in>VectorAddKernels.cl</in>
+        </df>
+        <df name="VehicleDemo">
+          <df name="CMakeFiles">
+          </df>
+          <in>VehicleDemo.cpp</in>
+          <in>VehicleDemo.h</in>
+          <in>main.cpp</in>
+        </df>
+      </df>
+      <df name="Extras">
+        <df name="AllBulletDemosOSX">
+          <df name="AllBulletDemos.xcodeproj">
+          </df>
+          <df name="English.lproj">
+          </df>
+          <df name="src">
+            <df name="toolkit">
+              <in>BTFullscreenWindow.h</in>
+              <in>BTFullscreenWindow.m</in>
+              <in>BTGLUTKeyAdapter.h</in>
+              <in>BTGLUTKeyAdapter.m</in>
+              <in>BTOpenGLDisplayDelegate.h</in>
+              <in>BTOpenGLView.h</in>
+              <in>BTOpenGLView.m</in>
+            </df>
+            <in>BTDemo.h</in>
+            <in>BTDemo.mm</in>
+            <in>BTDemosAppController.h</in>
+            <in>BTDemosAppController.m</in>
+            <in>BTSimulationParameters.h</in>
+            <in>BTSimulationParameters.m</in>
+          </df>
+          <in>main.m</in>
+        </df>
+        <df name="CDTestFramework">
+          <df name="AntTweakBar">
+            <df name="examples">
+              <in>TwAdvanced1.cpp</in>
+              <in>TwSimpleDX9.cpp</in>
+              <in>TwSimpleGLFW.c</in>
+              <in>TwSimpleGLUT.c</in>
+              <in>TwSimpleSDL.c</in>
+              <in>glfw.h</in>
+            </df>
+            <df name="include">
+              <in>AntTweakBar.h</in>
+            </df>
+            <df name="lib">
+            </df>
+            <df name="src">
+              <df name="res">
+                <in>TwXCursors.h</in>
+              </df>
+              <in>AntPerfTimer.h</in>
+              <in>LoadOGL.cpp</in>
+              <in>LoadOGL.h</in>
+              <in>TwBar.cpp</in>
+              <in>TwBar.h</in>
+              <in>TwColors.cpp</in>
+              <in>TwColors.h</in>
+              <in>TwDirect3D9.cpp</in>
+              <in>TwDirect3D9.h</in>
+              <in>TwEventGLFW.c</in>
+              <in>TwEventGLUT.c</in>
+              <in>TwEventSDL.c</in>
+              <in>TwEventWin32.c</in>
+              <in>TwFonts.cpp</in>
+              <in>TwFonts.h</in>
+              <in>TwGraph.h</in>
+              <in>TwMgr.cpp</in>
+              <in>TwMgr.h</in>
+              <in>TwOpenGL.cpp</in>
+              <in>TwOpenGL.h</in>
+              <in>TwPrecomp.cpp</in>
+              <in>TwPrecomp.h</in>
+              <in>resource.h</in>
+            </df>
+          </df>
+          <df name="Bin">
+          </df>
+          <df name="Opcode">
+            <df name="Ice">
+              <in>IceAABB.cpp</in>
+              <in>IceAABB.h</in>
+              <in>IceAllocator.cpp</in>
+              <in>IceAllocator.h</in>
+              <in>IceAssert.h</in>
+              <in>IceAxes.h</in>
+              <in>IceBitArray.cpp</in>
+              <in>IceBitArray.h</in>
+              <in>IceBoundingSphere.h</in>
+              <in>IceContainer.cpp</in>
+              <in>IceContainer.h</in>
+              <in>IceFPU.h</in>
+              <in>IceHPoint.cpp</in>
+              <in>IceHPoint.h</in>
+              <in>IceHashing.h</in>
+              <in>IceIndexedTriangle.cpp</in>
+              <in>IceIndexedTriangle.h</in>
+              <in>IceLSS.h</in>
+              <in>IceMatrix3x3.cpp</in>
+              <in>IceMatrix3x3.h</in>
+              <in>IceMatrix4x4.cpp</in>
+              <in>IceMatrix4x4.h</in>
+              <in>IceMemoryMacros.h</in>
+              <in>IceOBB.cpp</in>
+              <in>IceOBB.h</in>
+              <in>IcePairs.h</in>
+              <in>IcePlane.cpp</in>
+              <in>IcePlane.h</in>
+              <in>IcePoint.cpp</in>
+              <in>IcePoint.h</in>
+              <in>IcePreprocessor.h</in>
+              <in>IceRandom.cpp</in>
+              <in>IceRandom.h</in>
+              <in>IceRay.cpp</in>
+              <in>IceRay.h</in>
+              <in>IceRevisitedRadix.cpp</in>
+              <in>IceRevisitedRadix.h</in>
+              <in>IceSegment.cpp</in>
+              <in>IceSegment.h</in>
+              <in>IceTriangle.cpp</in>
+              <in>IceTriangle.h</in>
+              <in>IceTrilist.h</in>
+              <in>IceTypes.h</in>
+              <in>IceUtils.cpp</in>
+              <in>IceUtils.h</in>
+              <in>_IceAABB.h</in>
+              <in>_IceContainer.cpp</in>
+              <in>_IceContainer.h</in>
+              <in>_IceFPU.h</in>
+              <in>_IceMemoryMacros.h</in>
+              <in>_IcePreprocessor.h</in>
+              <in>_IceRevisitedRadix.cpp</in>
+              <in>_IceRevisitedRadix.h</in>
+              <in>_IceTypes.h</in>
+              <in>_IceUtils.h</in>
+            </df>
+            <in>OPC_AABBCollider.cpp</in>
+            <in>OPC_AABBCollider.h</in>
+            <in>OPC_AABBTree.cpp</in>
+            <in>OPC_AABBTree.h</in>
+            <in>OPC_ArraySAP.cpp</in>
+            <in>OPC_ArraySAP.h</in>
+            <in>OPC_BaseModel.cpp</in>
+            <in>OPC_BaseModel.h</in>
+            <in>OPC_BoxBoxOverlap.h</in>
+            <in>OPC_BoxPruning.cpp</in>
+            <in>OPC_BoxPruning.h</in>
+            <in>OPC_Collider.cpp</in>
+            <in>OPC_Collider.h</in>
+            <in>OPC_Common.cpp</in>
+            <in>OPC_Common.h</in>
+            <in>OPC_HybridModel.cpp</in>
+            <in>OPC_HybridModel.h</in>
+            <in>OPC_IceHook.h</in>
+            <in>OPC_LSSAABBOverlap.h</in>
+            <in>OPC_LSSCollider.cpp</in>
+            <in>OPC_LSSCollider.h</in>
+            <in>OPC_LSSTriOverlap.h</in>
+            <in>OPC_MeshInterface.cpp</in>
+            <in>OPC_MeshInterface.h</in>
+            <in>OPC_Model.cpp</in>
+            <in>OPC_Model.h</in>
+            <in>OPC_OBBCollider.cpp</in>
+            <in>OPC_OBBCollider.h</in>
+            <in>OPC_OptimizedTree.cpp</in>
+            <in>OPC_OptimizedTree.h</in>
+            <in>OPC_Picking.cpp</in>
+            <in>OPC_Picking.h</in>
+            <in>OPC_PlanesAABBOverlap.h</in>
+            <in>OPC_PlanesCollider.cpp</in>
+            <in>OPC_PlanesCollider.h</in>
+            <in>OPC_PlanesTriOverlap.h</in>
+            <in>OPC_RayAABBOverlap.h</in>
+            <in>OPC_RayCollider.cpp</in>
+            <in>OPC_RayCollider.h</in>
+            <in>OPC_RayTriOverlap.h</in>
+            <in>OPC_Settings.h</in>
+            <in>OPC_SphereAABBOverlap.h</in>
+            <in>OPC_SphereCollider.cpp</in>
+            <in>OPC_SphereCollider.h</in>
+            <in>OPC_SphereTriOverlap.h</in>
+            <in>OPC_SweepAndPrune.cpp</in>
+            <in>OPC_SweepAndPrune.h</in>
+            <in>OPC_TreeBuilders.cpp</in>
+            <in>OPC_TreeBuilders.h</in>
+            <in>OPC_TreeCollider.cpp</in>
+            <in>OPC_TreeCollider.h</in>
+            <in>OPC_TriBoxOverlap.h</in>
+            <in>OPC_TriTriOverlap.h</in>
+            <in>OPC_VolumeCollider.cpp</in>
+            <in>OPC_VolumeCollider.h</in>
+            <in>Opcode.cpp</in>
+            <in>Opcode.h</in>
+            <in>StdAfx.cpp</in>
+            <in>StdAfx.h</in>
+          </df>
+          <in>BipartiteBoxPruning.cpp</in>
+          <in>BipartiteBoxPruning.h</in>
+          <in>BulletSAPCompleteBoxPruningTest.cpp</in>
+          <in>BulletSAPCompleteBoxPruningTest.h</in>
+          <in>CDTestFramework.cpp</in>
+          <in>CDTestFramework.h</in>
+          <in>Camera.cpp</in>
+          <in>Camera.h</in>
+          <in>CapsuleMeshQuery.cpp</in>
+          <in>CapsuleMeshQuery.h</in>
+          <in>CollisionTest.cpp</in>
+          <in>CollisionTest.h</in>
+          <in>CompleteBoxPruning.cpp</in>
+          <in>CompleteBoxPruning.h</in>
+          <in>GLFontData.h</in>
+          <in>GLFontRenderer.cpp</in>
+          <in>GLFontRenderer.h</in>
+          <in>IceHelpers.cpp</in>
+          <in>IceHelpers.h</in>
+          <in>OBBMeshQuery.cpp</in>
+          <in>OBBMeshQuery.h</in>
+          <in>OpcodeArraySAPTest.cpp</in>
+          <in>OpcodeArraySAPTest.h</in>
+          <in>Profiling.h</in>
+          <in>RenderingHelpers.cpp</in>
+          <in>RenderingHelpers.h</in>
+          <in>SphereMeshQuery.cpp</in>
+          <in>SphereMeshQuery.h</in>
+          <in>Terrain.cpp</in>
+          <in>Terrain.h</in>
+          <in>stdafx.cpp</in>
+          <in>stdafx.h</in>
+        </df>
+        <df name="CMakeFiles">
+        </df>
+        <df name="ConvexDecomposition">
+          <df name="CMakeFiles">
+          </df>
+          <in>ConvexBuilder.cpp</in>
+          <in>ConvexBuilder.h</in>
+          <in>ConvexDecomposition.cpp</in>
+          <in>ConvexDecomposition.h</in>
+          <in>bestfit.cpp</in>
+          <in>bestfit.h</in>
+          <in>bestfitobb.cpp</in>
+          <in>bestfitobb.h</in>
+          <in>cd_hull.cpp</in>
+          <in>cd_hull.h</in>
+          <in>cd_vector.h</in>
+          <in>cd_wavefront.cpp</in>
+          <in>cd_wavefront.h</in>
+          <in>concavity.cpp</in>
+          <in>concavity.h</in>
+          <in>fitsphere.cpp</in>
+          <in>fitsphere.h</in>
+          <in>float_math.cpp</in>
+          <in>float_math.h</in>
+          <in>meshvolume.cpp</in>
+          <in>meshvolume.h</in>
+          <in>planetri.cpp</in>
+          <in>planetri.h</in>
+          <in>raytri.cpp</in>
+          <in>raytri.h</in>
+          <in>splitplane.cpp</in>
+          <in>splitplane.h</in>
+          <in>vlookup.cpp</in>
+          <in>vlookup.h</in>
+        </df>
+        <df name="CUDA">
+          <in>btCudaBroadphase.cpp</in>
+          <in>btCudaBroadphase.h</in>
+          <in>btCudaDefines.h</in>
+          <in>cutil_gl_error.h</in>
+          <in>cutil_math.h</in>
+          <in>radixsort.cuh</in>
+        </df>
+        <df name="GIMPACTUtils">
+          <df name="CMakeFiles">
+          </df>
+          <in>btGImpactConvexDecompositionShape.cpp</in>
+          <in>btGImpactConvexDecompositionShape.h</in>
+        </df>
+        <df name="glui">
+          <df name="CMakeFiles">
+          </df>
+          <df name="GL">
+            <in>glui.h</in>
+          </df>
+          <in>algebra3.cpp</in>
+          <in>algebra3.h</in>
+          <in>arcball.cpp</in>
+          <in>arcball.h</in>
+          <in>glui.cpp</in>
+          <in>glui_add_controls.cpp</in>
+          <in>glui_bitmap_img_data.cpp</in>
+          <in>glui_bitmaps.cpp</in>
+          <in>glui_button.cpp</in>
+          <in>glui_checkbox.cpp</in>
+          <in>glui_column.cpp</in>
+          <in>glui_commandline.cpp</in>
+          <in>glui_control.cpp</in>
+          <in>glui_edittext.cpp</in>
+          <in>glui_filebrowser.cpp</in>
+          <in>glui_internal.h</in>
+          <in>glui_internal_control.h</in>
+          <in>glui_list.cpp</in>
+          <in>glui_listbox.cpp</in>
+          <in>glui_mouse_iaction.cpp</in>
+          <in>glui_node.cpp</in>
+          <in>glui_panel.cpp</in>
+          <in>glui_radio.cpp</in>
+          <in>glui_rollout.cpp</in>
+          <in>glui_rotation.cpp</in>
+          <in>glui_scrollbar.cpp</in>
+          <in>glui_separator.cpp</in>
+          <in>glui_spinner.cpp</in>
+          <in>glui_statictext.cpp</in>
+          <in>glui_string.cpp</in>
+          <in>glui_textbox.cpp</in>
+          <in>glui_translation.cpp</in>
+          <in>glui_tree.cpp</in>
+          <in>glui_treepanel.cpp</in>
+          <in>glui_window.cpp</in>
+          <in>quaternion.cpp</in>
+          <in>quaternion.h</in>
+        </df>
+        <df name="HACD">
+          <df name="CMakeFiles">
+          </df>
+          <in>hacdCircularList.h</in>
+          <in>hacdCircularList.inl</in>
+          <in>hacdGraph.cpp</in>
+          <in>hacdGraph.h</in>
+          <in>hacdHACD.cpp</in>
+          <in>hacdHACD.h</in>
+          <in>hacdICHull.cpp</in>
+          <in>hacdICHull.h</in>
+          <in>hacdManifoldMesh.cpp</in>
+          <in>hacdManifoldMesh.h</in>
+          <in>hacdVector.h</in>
+          <in>hacdVector.inl</in>
+          <in>hacdVersion.h</in>
+        </df>
+        <df name="iff">
+          <df name="iffCheck">
+            <in>iffcheck.cpp</in>
+          </df>
+          <df name="iffCreateTest">
+            <in>main.cpp</in>
+          </df>
+          <in>iff.h</in>
+          <in>iffr.cpp</in>
+          <in>iffw.cpp</in>
+        </df>
+        <df name="khx2dae">
+        </df>
+        <df name="Serialize">
+          <df name="BlenderSerialize">
+            <in>bBlenderFile.cpp</in>
+            <in>bBlenderFile.h</in>
+            <in>bMain.cpp</in>
+            <in>bMain.h</in>
+            <in>dna249-64bit.cpp</in>
+            <in>dna249.cpp</in>
+          </df>
+          <df name="BulletFileLoader">
+            <df name="autogenerated">
+              <in>bullet.h</in>
+            </df>
+            <df name="CMakeFiles">
+            </df>
+            <in>bChunk.cpp</in>
+            <in>bChunk.h</in>
+            <in>bCommon.h</in>
+            <in>bDNA.cpp</in>
+            <in>bDNA.h</in>
+            <in>bDefines.h</in>
+            <in>bFile.cpp</in>
+            <in>bFile.h</in>
+            <in>btBulletFile.cpp</in>
+            <in>btBulletFile.h</in>
+          </df>
+          <df name="BulletWorldImporter">
+            <df name="CMakeFiles">
+            </df>
+            <in>btBulletWorldImporter.cpp</in>
+            <in>btBulletWorldImporter.h</in>
+          </df>
+          <df name="CMakeFiles">
+          </df>
+          <df name="HeaderGenerator">
+            <in>apiGen.cpp</in>
+          </df>
+          <df name="makesdna">
+            <in>DNA_rigidbody.h</in>
+            <in>makesdna.cpp</in>
+          </df>
+          <df name="ReadBulletSample">
+            <in>BulletDataExtractor.cpp</in>
+            <in>BulletDataExtractor.h</in>
+            <in>main.cpp</in>
+          </df>
+        </df>
+        <df name="simdmathlibrary">
+          <df name="common">
+            <df name="simdmath">
+              <in>_sincos.h</in>
+            </df>
+            <in>absi4.c</in>
+            <in>acosf4.c</in>
+            <in>asinf4.c</in>
+            <in>atan2f4.c</in>
+            <in>atanf4.c</in>
+            <in>cbrtf4.c</in>
+            <in>ceild2.c</in>
+            <in>ceilf4.c</in>
+            <in>common-test.h</in>
+            <in>copysignd2.c</in>
+            <in>copysignf4.c</in>
+            <in>cosd2.c</in>
+            <in>cosf4.c</in>
+            <in>divd2.c</in>
+            <in>divf4.c</in>
+            <in>divi4.c</in>
+            <in>divu4.c</in>
+            <in>exp2f4.c</in>
+            <in>expf4.c</in>
+            <in>expm1f4.c</in>
+            <in>fabsd2.c</in>
+            <in>fabsf4.c</in>
+            <in>fdimd2.c</in>
+            <in>fdimf4.c</in>
+            <in>floord2.c</in>
+            <in>floorf4.c</in>
+            <in>fmad2.c</in>
+            <in>fmaf4.c</in>
+            <in>fmaxd2.c</in>
+            <in>fmaxf4.c</in>
+            <in>fmind2.c</in>
+            <in>fminf4.c</in>
+            <in>fmodd2.c</in>
+            <in>fmodf4.c</in>
+            <in>fpclassifyd2.c</in>
+            <in>fpclassifyf4.c</in>
+            <in>frexpd2.c</in>
+            <in>frexpf4.c</in>
+            <in>hypotd2.c</in>
+            <in>hypotf4.c</in>
+            <in>ilogbd2.c</in>
+            <in>ilogbf4.c</in>
+            <in>irintf4.c</in>
+            <in>iroundf4.c</in>
+            <in>is0denormd2.c</in>
+            <in>is0denormf4.c</in>
+            <in>isequald2.c</in>
+            <in>isequalf4.c</in>
+            <in>isfinited2.c</in>
+            <in>isfinitef4.c</in>
+            <in>isgreaterd2.c</in>
+            <in>isgreaterequald2.c</in>
+            <in>isgreaterequalf4.c</in>
+            <in>isgreaterf4.c</in>
+            <in>isinfd2.c</in>
+            <in>isinff4.c</in>
+            <in>islessd2.c</in>
+            <in>islessequald2.c</in>
+            <in>islessequalf4.c</in>
+            <in>islessf4.c</in>
+            <in>islessgreaterd2.c</in>
+            <in>islessgreaterf4.c</in>
+            <in>isnand2.c</in>
+            <in>isnanf4.c</in>
+            <in>isnormald2.c</in>
+            <in>isnormalf4.c</in>
+            <in>isunorderedd2.c</in>
+            <in>isunorderedf4.c</in>
+            <in>ldexpd2.c</in>
+            <in>ldexpf4.c</in>
+            <in>llabsi2.c</in>
+            <in>lldivi2.c</in>
+            <in>lldivu2.c</in>
+            <in>llrintd2.c</in>
+            <in>llrintf4.c</in>
+            <in>llroundd2.c</in>
+            <in>llroundf4.c</in>
+            <in>log10f4.c</in>
+            <in>log1pf4.c</in>
+            <in>log2f4.c</in>
+            <in>logbd2.c</in>
+            <in>logbf4.c</in>
+            <in>logf4.c</in>
+            <in>modfd2.c</in>
+            <in>modff4.c</in>
+            <in>nearbyintd2.c</in>
+            <in>nearbyintf4.c</in>
+            <in>negated2.c</in>
+            <in>negatef4.c</in>
+            <in>negatei4.c</in>
+            <in>negatell2.c</in>
+            <in>nextafterd2.c</in>
+            <in>nextafterf4.c</in>
+            <in>powf4.c</in>
+            <in>recipd2.c</in>
+            <in>recipf4.c</in>
+            <in>remainderd2.c</in>
+            <in>remainderf4.c</in>
+            <in>remquod2.c</in>
+            <in>remquof4.c</in>
+            <in>rintd2.c</in>
+            <in>rintf4.c</in>
+            <in>roundd2.c</in>
+            <in>roundf4.c</in>
+            <in>rsqrtd2.c</in>
+            <in>rsqrtf4.c</in>
+            <in>scalbllnd2.c</in>
+            <in>scalbnf4.c</in>
+            <in>signbitd2.c</in>
+            <in>signbitf4.c</in>
+            <in>simdmath.h</in>
+            <in>sincosd2.c</in>
+            <in>sincosf4.c</in>
+            <in>sind2.c</in>
+            <in>sinf4.c</in>
+            <in>sqrtd2.c</in>
+            <in>sqrtf4.c</in>
+            <in>tand2.c</in>
+            <in>tanf4.c</in>
+            <in>truncd2.c</in>
+            <in>truncf4.c</in>
+          </df>
+          <df name="ppu">
+            <df name="simdmath">
+              <in>_vec_utils.h</in>
+              <in>absi4.h</in>
+              <in>acosf4.h</in>
+              <in>asinf4.h</in>
+              <in>atan2f4.h</in>
+              <in>atanf4.h</in>
+              <in>cbrtf4.h</in>
+              <in>ceilf4.h</in>
+              <in>copysignf4.h</in>
+              <in>cosf4.h</in>
+              <in>divf4.h</in>
+              <in>divi4.h</in>
+              <in>exp2f4.h</in>
+              <in>expf4.h</in>
+              <in>expm1f4.h</in>
+              <in>fabsf4.h</in>
+              <in>fdimf4.h</in>
+              <in>floorf4.h</in>
+              <in>fmaf4.h</in>
+              <in>fmaxf4.h</in>
+              <in>fminf4.h</in>
+              <in>fmodf4.h</in>
+              <in>frexpf4.h</in>
+              <in>hypotf4.h</in>
+              <in>ilogbf4.h</in>
+              <in>ldexpf4.h</in>
+              <in>log10f4.h</in>
+              <in>log1pf4.h</in>
+              <in>log2f4.h</in>
+              <in>logbf4.h</in>
+              <in>logf4.h</in>
+              <in>modff4.h</in>
+              <in>negatef4.h</in>
+              <in>negatei4.h</in>
+              <in>powf4.h</in>
+              <in>recipf4.h</in>
+              <in>rsqrtf4.h</in>
+              <in>sincosf4.h</in>
+              <in>sinf4.h</in>
+              <in>sqrtf4.h</in>
+              <in>tanf4.h</in>
+              <in>truncf4.h</in>
+            </df>
+            <df name="tests">
+              <in>absi4.c</in>
+              <in>ceilf4.c</in>
+              <in>copysignf4.c</in>
+              <in>divf4.c</in>
+              <in>divi4.c</in>
+              <in>fabsf4.c</in>
+              <in>floorf4.c</in>
+              <in>fminf4_fmaxf4.c</in>
+              <in>fmodf4.c</in>
+              <in>modff4.c</in>
+              <in>negatef4.c</in>
+              <in>negatei4.c</in>
+              <in>recipf4.c</in>
+              <in>rsqrtf4.c</in>
+              <in>sqrtf4.c</in>
+              <in>testutils.c</in>
+              <in>testutils.h</in>
+              <in>truncf4.c</in>
+            </df>
+          </df>
+          <df name="spu">
+            <df name="simdmath">
+              <in>_lldiv.h</in>
+              <in>_remainder.h</in>
+              <in>_vec_utils.h</in>
+              <in>absi4.h</in>
+              <in>acosf4.h</in>
+              <in>asinf4.h</in>
+              <in>atan2f4.h</in>
+              <in>atanf4.h</in>
+              <in>cbrtf4.h</in>
+              <in>ceild2.h</in>
+              <in>ceilf4.h</in>
+              <in>copysignd2.h</in>
+              <in>copysignf4.h</in>
+              <in>cosd2.h</in>
+              <in>cosf4.h</in>
+              <in>divd2.h</in>
+              <in>divf4.h</in>
+              <in>divi4.h</in>
+              <in>divu4.h</in>
+              <in>exp2f4.h</in>
+              <in>expf4.h</in>
+              <in>expm1f4.h</in>
+              <in>fabsd2.h</in>
+              <in>fabsf4.h</in>
+              <in>fdimd2.h</in>
+              <in>fdimf4.h</in>
+              <in>floord2.h</in>
+              <in>floorf4.h</in>
+              <in>fmad2.h</in>
+              <in>fmaf4.h</in>
+              <in>fmaxd2.h</in>
+              <in>fmaxf4.h</in>
+              <in>fmind2.h</in>
+              <in>fminf4.h</in>
+              <in>fmodd2.h</in>
+              <in>fmodf4.h</in>
+              <in>fpclassifyd2.h</in>
+              <in>fpclassifyf4.h</in>
+              <in>frexpd2.h</in>
+              <in>frexpf4.h</in>
+              <in>hypotd2.h</in>
+              <in>hypotf4.h</in>
+              <in>ilogbd2.h</in>
+              <in>ilogbf4.h</in>
+              <in>irintf4.h</in>
+              <in>iroundf4.h</in>
+              <in>is0denormd2.h</in>
+              <in>is0denormf4.h</in>
+              <in>isequald2.h</in>
+              <in>isequalf4.h</in>
+              <in>isfinited2.h</in>
+              <in>isfinitef4.h</in>
+              <in>isgreaterd2.h</in>
+              <in>isgreaterequald2.h</in>
+              <in>isgreaterequalf4.h</in>
+              <in>isgreaterf4.h</in>
+              <in>isinfd2.h</in>
+              <in>isinff4.h</in>
+              <in>islessd2.h</in>
+              <in>islessequald2.h</in>
+              <in>islessequalf4.h</in>
+              <in>islessf4.h</in>
+              <in>islessgreaterd2.h</in>
+              <in>islessgreaterf4.h</in>
+              <in>isnand2.h</in>
+              <in>isnanf4.h</in>
+              <in>isnormald2.h</in>
+              <in>isnormalf4.h</in>
+              <in>isunorderedd2.h</in>
+              <in>isunorderedf4.h</in>
+              <in>ldexpd2.h</in>
+              <in>ldexpf4.h</in>
+              <in>llabsi2.h</in>
+              <in>lldivi2.h</in>
+              <in>lldivu2.h</in>
+              <in>llrintd2.h</in>
+              <in>llrintf4.h</in>
+              <in>llroundd2.h</in>
+              <in>llroundf4.h</in>
+              <in>log10f4.h</in>
+              <in>log1pf4.h</in>
+              <in>log2f4.h</in>
+              <in>logbd2.h</in>
+              <in>logbf4.h</in>
+              <in>logf4.h</in>
+              <in>modfd2.h</in>
+              <in>modff4.h</in>
+              <in>nearbyintd2.h</in>
+              <in>nearbyintf4.h</in>
+              <in>negated2.h</in>
+              <in>negatef4.h</in>
+              <in>negatei4.h</in>
+              <in>negatell2.h</in>
+              <in>nextafterd2.h</in>
+              <in>nextafterf4.h</in>
+              <in>powf4.h</in>
+              <in>recipd2.h</in>
+              <in>recipf4.h</in>
+              <in>remainderd2.h</in>
+              <in>remainderf4.h</in>
+              <in>remquod2.h</in>
+              <in>remquof4.h</in>
+              <in>rintd2.h</in>
+              <in>rintf4.h</in>
+              <in>roundd2.h</in>
+              <in>roundf4.h</in>
+              <in>rsqrtd2.h</in>
+              <in>rsqrtf4.h</in>
+              <in>scalbllnd2.h</in>
+              <in>scalbnf4.h</in>
+              <in>signbitd2.h</in>
+              <in>signbitf4.h</in>
+              <in>sincosd2.h</in>
+              <in>sincosf4.h</in>
+              <in>sind2.h</in>
+              <in>sinf4.h</in>
+              <in>sqrtd2.h</in>
+              <in>sqrtf4.h</in>
+              <in>tand2.h</in>
+              <in>tanf4.h</in>
+              <in>truncd2.h</in>
+              <in>truncf4.h</in>
+            </df>
+            <df name="tests">
+              <in>absi4.c</in>
+              <in>ceild2.c</in>
+              <in>ceilf4.c</in>
+              <in>copysignd2.c</in>
+              <in>copysignf4.c</in>
+              <in>divd2.c</in>
+              <in>divf4.c</in>
+              <in>divi4.c</in>
+              <in>divu4.c</in>
+              <in>fabsd2.c</in>
+              <in>fabsf4.c</in>
+              <in>fdimd2.c</in>
+              <in>floord2.c</in>
+              <in>floorf4.c</in>
+              <in>fmad2.c</in>
+              <in>fmind2_fmaxd2.c</in>
+              <in>fminf4_fmaxf4.c</in>
+              <in>fmodd2.c</in>
+              <in>fmodf4.c</in>
+              <in>fpclassifyd2.c</in>
+              <in>fpclassifyf4.c</in>
+              <in>frexpd2.c</in>
+              <in>frexpf4.c</in>
+              <in>hypotd2.c</in>
+              <in>hypotf4.c</in>
+              <in>ilogbd2.c</in>
+              <in>ilogbf4.c</in>
+              <in>irintf4.c</in>
+              <in>iroundf4.c</in>
+              <in>is0denormd2.c</in>
+              <in>is0denormf4.c</in>
+              <in>isequald2.c</in>
+              <in>isequalf4.c</in>
+              <in>isfinited2.c</in>
+              <in>isfinitef4.c</in>
+              <in>isgreaterd2.c</in>
+              <in>isgreaterequald2.c</in>
+              <in>isgreaterequalf4.c</in>
+              <in>isgreaterf4.c</in>
+              <in>isinfd2.c</in>
+              <in>isinff4.c</in>
+              <in>islessd2.c</in>
+              <in>islessequald2.c</in>
+              <in>islessequalf4.c</in>
+              <in>islessf4.c</in>
+              <in>islessgreaterd2.c</in>
+              <in>islessgreaterf4.c</in>
+              <in>isnand2.c</in>
+              <in>isnanf4.c</in>
+              <in>isnormald2.c</in>
+              <in>isnormalf4.c</in>
+              <in>isunorderedd2.c</in>
+              <in>isunorderedf4.c</in>
+              <in>ldexpd2.c</in>
+              <in>llabsi2.c</in>
+              <in>lldivi2.c</in>
+              <in>lldivu2.c</in>
+              <in>llrintd2.c</in>
+              <in>llrintf4.c</in>
+              <in>llroundd2.c</in>
+              <in>llroundf4.c</in>
+              <in>logbd2.c</in>
+              <in>logbf4.c</in>
+              <in>modfd2.c</in>
+              <in>modff4.c</in>
+              <in>nearbyintd2.c</in>
+              <in>nearbyintf4.c</in>
+              <in>negated2.c</in>
+              <in>negatef4.c</in>
+              <in>negatei4.c</in>
+              <in>negatell2.c</in>
+              <in>nextafterd2.c</in>
+              <in>nextafterf4.c</in>
+              <in>recipd2.c</in>
+              <in>recipf4.c</in>
+              <in>remainderd2.c</in>
+              <in>remainderf4.c</in>
+              <in>remquod2.c</in>
+              <in>remquof4.c</in>
+              <in>rintd2.c</in>
+              <in>rintf4.c</in>
+              <in>roundd2.c</in>
+              <in>roundf4.c</in>
+              <in>rsqrtd2.c</in>
+              <in>rsqrtf4.c</in>
+              <in>scalbllnd2.c</in>
+              <in>scalbnf4.c</in>
+              <in>signbitd2.c</in>
+              <in>signbitf4.c</in>
+              <in>sqrtd2.c</in>
+              <in>sqrtf4.c</in>
+              <in>testutils.c</in>
+              <in>testutils.h</in>
+              <in>truncd2.c</in>
+              <in>truncf4.c</in>
+            </df>
+          </df>
+        </df>
+        <df name="software_cache">
+          <df name="cache">
+            <df name="include">
+              <in>api.h</in>
+              <in>cbe_mfc.h</in>
+              <in>defs.h</in>
+              <in>dma.h</in>
+              <in>ilog2.h</in>
+              <in>memset.h</in>
+              <in>nway-lookup.h</in>
+              <in>nway-miss.h</in>
+              <in>nway-opt.h</in>
+              <in>nway-replace.h</in>
+              <in>nway.h</in>
+              <in>spe_cache.h</in>
+              <in>vec_literal.h</in>
+            </df>
+          </df>
+        </df>
+        <df name="sph">
+          <df name="common">
+            <in>GLee.c</in>
+            <in>GLee.h</in>
+            <in>common_defs.h</in>
+            <in>geomx.cpp</in>
+            <in>geomx.h</in>
+            <in>gl_helper.cpp</in>
+            <in>gl_helper.h</in>
+            <in>glext.h</in>
+            <in>glut.h</in>
+            <in>image.cpp</in>
+            <in>image.h</in>
+            <in>matrix-inline.h</in>
+            <in>matrix.cci</in>
+            <in>matrix.cpp</in>
+            <in>matrix.h</in>
+            <in>mdebug.cpp</in>
+            <in>mdebug.h</in>
+            <in>mesh.cpp</in>
+            <in>mesh.h</in>
+            <in>mesh_info.h</in>
+            <in>mtime.cpp</in>
+            <in>mtime.h</in>
+            <in>particle.cpp</in>
+            <in>particle.h</in>
+            <in>point_set.cpp</in>
+            <in>point_set.h</in>
+            <in>vector-inline.h</in>
+            <in>vector.cci</in>
+            <in>vector.cpp</in>
+            <in>vector.h</in>
+          </df>
+          <df name="fluids">
+            <in>fluid.cpp</in>
+            <in>fluid.h</in>
+            <in>fluid_system.cpp</in>
+            <in>fluid_system.h</in>
+            <in>fluid_system_host.cuh</in>
+            <in>fluid_system_kern.cuh</in>
+            <in>radixsort.cuh</in>
+          </df>
+          <in>main.cpp</in>
+        </df>
+        <df name="vectormathlibrary">
+          <df name="doc">
+          </df>
+          <df name="include">
+            <df name="vectormath">
+              <df name="c">
+                <in>vectormath_aos.h</in>
+                <in>vectormath_aos_v.h</in>
+                <in>vectormath_soa.h</in>
+                <in>vectormath_soa_v.h</in>
+              </df>
+              <df name="cpp">
+                <in>vectormath_aos.h</in>
+                <in>vectormath_soa.h</in>
+              </df>
+              <df name="ppu">
+                <df name="c">
+                  <in>mat_aos.h</in>
+                  <in>mat_aos_v.h</in>
+                  <in>mat_soa.h</in>
+                  <in>mat_soa_v.h</in>
+                  <in>quat_aos.h</in>
+                  <in>quat_aos_v.h</in>
+                  <in>quat_soa.h</in>
+                  <in>quat_soa_v.h</in>
+                  <in>vec_aos.h</in>
+                  <in>vec_aos_v.h</in>
+                  <in>vec_soa.h</in>
+                  <in>vec_soa_v.h</in>
+                  <in>vec_types.h</in>
+                  <in>vectormath_aos.h</in>
+                  <in>vectormath_aos_v.h</in>
+                  <in>vectormath_soa.h</in>
+                  <in>vectormath_soa_v.h</in>
+                </df>
+                <df name="cpp">
+                  <in>boolInVec.h</in>
+                  <in>floatInVec.h</in>
+                  <in>mat_aos.h</in>
+                  <in>mat_soa.h</in>
+                  <in>quat_aos.h</in>
+                  <in>quat_soa.h</in>
+                  <in>vec_aos.h</in>
+                  <in>vec_soa.h</in>
+                  <in>vecidx_aos.h</in>
+                  <in>vectormath_aos.h</in>
+                  <in>vectormath_soa.h</in>
+                </df>
+              </df>
+              <df name="scalar">
+                <df name="c">
+                  <in>mat_aos.h</in>
+                  <in>mat_aos_v.h</in>
+                  <in>quat_aos.h</in>
+                  <in>quat_aos_v.h</in>
+                  <in>vec_aos.h</in>
+                  <in>vec_aos_v.h</in>
+                  <in>vectormath_aos.h</in>
+                  <in>vectormath_aos_v.h</in>
+                </df>
+                <df name="cpp">
+                  <in>boolInVec.h</in>
+                  <in>floatInVec.h</in>
+                  <in>mat_aos.h</in>
+                  <in>quat_aos.h</in>
+                  <in>vec_aos.h</in>
+                  <in>vectormath_aos.h</in>
+                </df>
+              </df>
+              <df name="spu">
+                <df name="c">
+                  <in>mat_aos.h</in>
+                  <in>mat_aos_v.h</in>
+                  <in>mat_soa.h</in>
+                  <in>mat_soa_v.h</in>
+                  <in>quat_aos.h</in>
+                  <in>quat_aos_v.h</in>
+                  <in>quat_soa.h</in>
+                  <in>quat_soa_v.h</in>
+                  <in>vec_aos.h</in>
+                  <in>vec_aos_v.h</in>
+                  <in>vec_soa.h</in>
+                  <in>vec_soa_v.h</in>
+                  <in>vectormath_aos.h</in>
+                  <in>vectormath_aos_v.h</in>
+                  <in>vectormath_soa.h</in>
+                  <in>vectormath_soa_v.h</in>
+                </df>
+                <df name="cpp">
+                  <in>boolInVec.h</in>
+                  <in>floatInVec.h</in>
+                  <in>mat_aos.h</in>
+                  <in>mat_soa.h</in>
+                  <in>quat_aos.h</in>
+                  <in>quat_soa.h</in>
+                  <in>vec_aos.h</in>
+                  <in>vec_soa.h</in>
+                  <in>vecidx_aos.h</in>
+                  <in>vectormath_aos.h</in>
+                  <in>vectormath_soa.h</in>
+                </df>
+              </df>
+              <df name="SSE">
+                <df name="cpp">
+                  <in>boolInVec.h</in>
+                  <in>floatInVec.h</in>
+                  <in>mat_aos.h</in>
+                  <in>quat_aos.h</in>
+                  <in>vec_aos.h</in>
+                  <in>vecidx_aos.h</in>
+                  <in>vectormath_aos.h</in>
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="tests">
+            <in>main_vmtest.cpp</in>
+            <in>test.h</in>
+            <in>test1_aos_c.c</in>
+            <in>test1_aos_cpp.cpp</in>
+            <in>test1_soa_c.c</in>
+            <in>test1_soa_cpp.cpp</in>
+            <in>test2_aos_c.c</in>
+            <in>test2_aos_cpp.cpp</in>
+            <in>test2_soa_c.c</in>
+            <in>test2_soa_cpp.cpp</in>
+            <in>test3_aos_c.c</in>
+            <in>test3_aos_cpp.cpp</in>
+            <in>test3_soa_c.c</in>
+            <in>test3_soa_cpp.cpp</in>
+            <in>test4_aos_c.c</in>
+            <in>test4_aos_cpp.cpp</in>
+            <in>test4_soa_c.c</in>
+            <in>test4_soa_cpp.cpp</in>
+          </df>
+        </df>
+      </df>
+      <df name="Glut">
+        <df name="EmptyGL">
+          <df name="GL">
+            <in>egl_cpx.h</in>
+            <in>egl_defs.h</in>
+            <in>egl_logged.h</in>
+            <in>egl_tokens.h</in>
+            <in>egl_void.h</in>
+            <in>gl.h</in>
+            <in>glu.h</in>
+            <in>glut.h</in>
+          </df>
+        </df>
+        <df name="GL">
+          <in>glew.h</in>
+          <in>glext.h</in>
+          <in>glut.h</in>
+          <in>glxew.h</in>
+          <in>glxext.h</in>
+          <in>wglew.h</in>
+          <in>wglext.h</in>
+        </df>
+      </df>
+      <df name="lib">
+      </df>
+      <df name="msvc">
+      </df>
+      <df name="src">
+        <df name="BulletCollision">
+          <df name="BroadphaseCollision">
+            <in>btAxisSweep3.cpp</in>
+            <in>btAxisSweep3.h</in>
+            <in>btBroadphaseInterface.h</in>
+            <in>btBroadphaseProxy.cpp</in>
+            <in>btBroadphaseProxy.h</in>
+            <in>btCollisionAlgorithm.cpp</in>
+            <in>btCollisionAlgorithm.h</in>
+            <in>btDbvt.cpp</in>
+            <in>btDbvt.h</in>
+            <in>btDbvtBroadphase.cpp</in>
+            <in>btDbvtBroadphase.h</in>
+            <in>btDispatcher.cpp</in>
+            <in>btDispatcher.h</in>
+            <in>btMultiSapBroadphase.cpp</in>
+            <in>btMultiSapBroadphase.h</in>
+            <in>btOverlappingPairCache.cpp</in>
+            <in>btOverlappingPairCache.h</in>
+            <in>btOverlappingPairCallback.h</in>
+            <in>btQuantizedBvh.cpp</in>
+            <in>btQuantizedBvh.h</in>
+            <in>btSimpleBroadphase.cpp</in>
+            <in>btSimpleBroadphase.h</in>
+          </df>
+          <df name="CMakeFiles">
+          </df>
+          <df name="CollisionDispatch">
+            <in>SphereTriangleDetector.cpp</in>
+            <in>SphereTriangleDetector.h</in>
+            <in>btActivatingCollisionAlgorithm.cpp</in>
+            <in>btActivatingCollisionAlgorithm.h</in>
+            <in>btBox2dBox2dCollisionAlgorithm.cpp</in>
+            <in>btBox2dBox2dCollisionAlgorithm.h</in>
+            <in>btBoxBoxCollisionAlgorithm.cpp</in>
+            <in>btBoxBoxCollisionAlgorithm.h</in>
+            <in>btBoxBoxDetector.cpp</in>
+            <in>btBoxBoxDetector.h</in>
+            <in>btCollisionConfiguration.h</in>
+            <in>btCollisionCreateFunc.h</in>
+            <in>btCollisionDispatcher.cpp</in>
+            <in>btCollisionDispatcher.h</in>
+            <in>btCollisionObject.cpp</in>
+            <in>btCollisionObject.h</in>
+            <in>btCollisionWorld.cpp</in>
+            <in>btCollisionWorld.h</in>
+            <in>btCompoundCollisionAlgorithm.cpp</in>
+            <in>btCompoundCollisionAlgorithm.h</in>
+            <in>btConvex2dConvex2dAlgorithm.cpp</in>
+            <in>btConvex2dConvex2dAlgorithm.h</in>
+            <in>btConvexConcaveCollisionAlgorithm.cpp</in>
+            <in>btConvexConcaveCollisionAlgorithm.h</in>
+            <in>btConvexConvexAlgorithm.cpp</in>
+            <in>btConvexConvexAlgorithm.h</in>
+            <in>btConvexPlaneCollisionAlgorithm.cpp</in>
+            <in>btConvexPlaneCollisionAlgorithm.h</in>
+            <in>btDefaultCollisionConfiguration.cpp</in>
+            <in>btDefaultCollisionConfiguration.h</in>
+            <in>btEmptyCollisionAlgorithm.cpp</in>
+            <in>btEmptyCollisionAlgorithm.h</in>
+            <in>btGhostObject.cpp</in>
+            <in>btGhostObject.h</in>
+            <in>btInternalEdgeUtility.cpp</in>
+            <in>btInternalEdgeUtility.h</in>
+            <in>btManifoldResult.cpp</in>
+            <in>btManifoldResult.h</in>
+            <in>btSimulationIslandManager.cpp</in>
+            <in>btSimulationIslandManager.h</in>
+            <in>btSphereBoxCollisionAlgorithm.cpp</in>
+            <in>btSphereBoxCollisionAlgorithm.h</in>
+            <in>btSphereSphereCollisionAlgorithm.cpp</in>
+            <in>btSphereSphereCollisionAlgorithm.h</in>
+            <in>btSphereTriangleCollisionAlgorithm.cpp</in>
+            <in>btSphereTriangleCollisionAlgorithm.h</in>
+            <in>btUnionFind.cpp</in>
+            <in>btUnionFind.h</in>
+          </df>
+          <df name="CollisionShapes">
+            <in>btBox2dShape.cpp</in>
+            <in>btBox2dShape.h</in>
+            <in>btBoxShape.cpp</in>
+            <in>btBoxShape.h</in>
+            <in>btBvhTriangleMeshShape.cpp</in>
+            <in>btBvhTriangleMeshShape.h</in>
+            <in>btCapsuleShape.cpp</in>
+            <in>btCapsuleShape.h</in>
+            <in>btCollisionMargin.h</in>
+            <in>btCollisionShape.cpp</in>
+            <in>btCollisionShape.h</in>
+            <in>btCompoundShape.cpp</in>
+            <in>btCompoundShape.h</in>
+            <in>btConcaveShape.cpp</in>
+            <in>btConcaveShape.h</in>
+            <in>btConeShape.cpp</in>
+            <in>btConeShape.h</in>
+            <in>btConvex2dShape.cpp</in>
+            <in>btConvex2dShape.h</in>
+            <in>btConvexHullShape.cpp</in>
+            <in>btConvexHullShape.h</in>
+            <in>btConvexInternalShape.cpp</in>
+            <in>btConvexInternalShape.h</in>
+            <in>btConvexPointCloudShape.cpp</in>
+            <in>btConvexPointCloudShape.h</in>
+            <in>btConvexPolyhedron.cpp</in>
+            <in>btConvexPolyhedron.h</in>
+            <in>btConvexShape.cpp</in>
+            <in>btConvexShape.h</in>
+            <in>btConvexTriangleMeshShape.cpp</in>
+            <in>btConvexTriangleMeshShape.h</in>
+            <in>btCylinderShape.cpp</in>
+            <in>btCylinderShape.h</in>
+            <in>btEmptyShape.cpp</in>
+            <in>btEmptyShape.h</in>
+            <in>btHeightfieldTerrainShape.cpp</in>
+            <in>btHeightfieldTerrainShape.h</in>
+            <in>btMaterial.h</in>
+            <in>btMinkowskiSumShape.cpp</in>
+            <in>btMinkowskiSumShape.h</in>
+            <in>btMultiSphereShape.cpp</in>
+            <in>btMultiSphereShape.h</in>
+            <in>btMultimaterialTriangleMeshShape.cpp</in>
+            <in>btMultimaterialTriangleMeshShape.h</in>
+            <in>btOptimizedBvh.cpp</in>
+            <in>btOptimizedBvh.h</in>
+            <in>btPolyhedralConvexShape.cpp</in>
+            <in>btPolyhedralConvexShape.h</in>
+            <in>btScaledBvhTriangleMeshShape.cpp</in>
+            <in>btScaledBvhTriangleMeshShape.h</in>
+            <in>btShapeHull.cpp</in>
+            <in>btShapeHull.h</in>
+            <in>btSphereShape.cpp</in>
+            <in>btSphereShape.h</in>
+            <in>btStaticPlaneShape.cpp</in>
+            <in>btStaticPlaneShape.h</in>
+            <in>btStridingMeshInterface.cpp</in>
+            <in>btStridingMeshInterface.h</in>
+            <in>btTetrahedronShape.cpp</in>
+            <in>btTetrahedronShape.h</in>
+            <in>btTriangleBuffer.cpp</in>
+            <in>btTriangleBuffer.h</in>
+            <in>btTriangleCallback.cpp</in>
+            <in>btTriangleCallback.h</in>
+            <in>btTriangleIndexVertexArray.cpp</in>
+            <in>btTriangleIndexVertexArray.h</in>
+            <in>btTriangleIndexVertexMaterialArray.cpp</in>
+            <in>btTriangleIndexVertexMaterialArray.h</in>
+            <in>btTriangleInfoMap.h</in>
+            <in>btTriangleMesh.cpp</in>
+            <in>btTriangleMesh.h</in>
+            <in>btTriangleMeshShape.cpp</in>
+            <in>btTriangleMeshShape.h</in>
+            <in>btTriangleShape.h</in>
+            <in>btUniformScalingShape.cpp</in>
+            <in>btUniformScalingShape.h</in>
+          </df>
+          <df name="Gimpact">
+            <in>btBoxCollision.h</in>
+            <in>btClipPolygon.h</in>
+            <in>btContactProcessing.cpp</in>
+            <in>btContactProcessing.h</in>
+            <in>btGImpactBvh.cpp</in>
+            <in>btGImpactBvh.h</in>
+            <in>btGImpactCollisionAlgorithm.cpp</in>
+            <in>btGImpactCollisionAlgorithm.h</in>
+            <in>btGImpactMassUtil.h</in>
+            <in>btGImpactQuantizedBvh.cpp</in>
+            <in>btGImpactQuantizedBvh.h</in>
+            <in>btGImpactShape.cpp</in>
+            <in>btGImpactShape.h</in>
+            <in>btGenericPoolAllocator.cpp</in>
+            <in>btGenericPoolAllocator.h</in>
+            <in>btGeometryOperations.h</in>
+            <in>btQuantization.h</in>
+            <in>btTriangleShapeEx.cpp</in>
+            <in>btTriangleShapeEx.h</in>
+            <in>gim_array.h</in>
+            <in>gim_basic_geometry_operations.h</in>
+            <in>gim_bitset.h</in>
+            <in>gim_box_collision.h</in>
+            <in>gim_box_set.cpp</in>
+            <in>gim_box_set.h</in>
+            <in>gim_clip_polygon.h</in>
+            <in>gim_contact.cpp</in>
+            <in>gim_contact.h</in>
+            <in>gim_geom_types.h</in>
+            <in>gim_geometry.h</in>
+            <in>gim_hash_table.h</in>
+            <in>gim_linear_math.h</in>
+            <in>gim_math.h</in>
+            <in>gim_memory.cpp</in>
+            <in>gim_memory.h</in>
+            <in>gim_radixsort.h</in>
+            <in>gim_tri_collision.cpp</in>
+            <in>gim_tri_collision.h</in>
+          </df>
+          <df name="ibmsdk">
+          </df>
+          <df name="NarrowPhaseCollision">
+            <in>btContinuousConvexCollision.cpp</in>
+            <in>btContinuousConvexCollision.h</in>
+            <in>btConvexCast.cpp</in>
+            <in>btConvexCast.h</in>
+            <in>btConvexPenetrationDepthSolver.h</in>
+            <in>btDiscreteCollisionDetectorInterface.h</in>
+            <in>btGjkConvexCast.cpp</in>
+            <in>btGjkConvexCast.h</in>
+            <in>btGjkEpa2.cpp</in>
+            <in>btGjkEpa2.h</in>
+            <in>btGjkEpaPenetrationDepthSolver.cpp</in>
+            <in>btGjkEpaPenetrationDepthSolver.h</in>
+            <in>btGjkPairDetector.cpp</in>
+            <in>btGjkPairDetector.h</in>
+            <in>btManifoldPoint.h</in>
+            <in>btMinkowskiPenetrationDepthSolver.cpp</in>
+            <in>btMinkowskiPenetrationDepthSolver.h</in>
+            <in>btPersistentManifold.cpp</in>
+            <in>btPersistentManifold.h</in>
+            <in>btPointCollector.h</in>
+            <in>btPolyhedralContactClipping.cpp</in>
+            <in>btPolyhedralContactClipping.h</in>
+            <in>btRaycastCallback.cpp</in>
+            <in>btRaycastCallback.h</in>
+            <in>btSimplexSolverInterface.h</in>
+            <in>btSubSimplexConvexCast.cpp</in>
+            <in>btSubSimplexConvexCast.h</in>
+            <in>btVoronoiSimplexSolver.cpp</in>
+            <in>btVoronoiSimplexSolver.h</in>
+          </df>
+        </df>
+        <df name="BulletDynamics">
+          <df name="Character">
+            <in>btCharacterControllerInterface.h</in>
+            <in>btKinematicCharacterController.cpp</in>
+            <in>btKinematicCharacterController.h</in>
+          </df>
+          <df name="CMakeFiles">
+          </df>
+          <df name="ConstraintSolver">
+            <in>btConeTwistConstraint.cpp</in>
+            <in>btConeTwistConstraint.h</in>
+            <in>btConstraintSolver.h</in>
+            <in>btContactConstraint.cpp</in>
+            <in>btContactConstraint.h</in>
+            <in>btContactSolverInfo.h</in>
+            <in>btGeneric6DofConstraint.cpp</in>
+            <in>btGeneric6DofConstraint.h</in>
+            <in>btGeneric6DofSpringConstraint.cpp</in>
+            <in>btGeneric6DofSpringConstraint.h</in>
+            <in>btHinge2Constraint.cpp</in>
+            <in>btHinge2Constraint.h</in>
+            <in>btHingeConstraint.cpp</in>
+            <in>btHingeConstraint.h</in>
+            <in>btJacobianEntry.h</in>
+            <in>btPoint2PointConstraint.cpp</in>
+            <in>btPoint2PointConstraint.h</in>
+            <in>btSequentialImpulseConstraintSolver.cpp</in>
+            <in>btSequentialImpulseConstraintSolver.h</in>
+            <in>btSliderConstraint.cpp</in>
+            <in>btSliderConstraint.h</in>
+            <in>btSolve2LinearConstraint.cpp</in>
+            <in>btSolve2LinearConstraint.h</in>
+            <in>btSolverBody.h</in>
+            <in>btSolverConstraint.h</in>
+            <in>btTypedConstraint.cpp</in>
+            <in>btTypedConstraint.h</in>
+            <in>btUniversalConstraint.cpp</in>
+            <in>btUniversalConstraint.h</in>
+          </df>
+          <df name="Dynamics">
+            <in>Bullet-C-API.cpp</in>
+            <in>btActionInterface.h</in>
+            <in>btDiscreteDynamicsWorld.cpp</in>
+            <in>btDiscreteDynamicsWorld.h</in>
+            <in>btDynamicsWorld.h</in>
+            <in>btRigidBody.cpp</in>
+            <in>btRigidBody.h</in>
+            <in>btSimpleDynamicsWorld.cpp</in>
+            <in>btSimpleDynamicsWorld.h</in>
+          </df>
+          <df name="ibmsdk">
+          </df>
+          <df name="Vehicle">
+            <in>btRaycastVehicle.cpp</in>
+            <in>btRaycastVehicle.h</in>
+            <in>btVehicleRaycaster.h</in>
+            <in>btWheelInfo.cpp</in>
+            <in>btWheelInfo.h</in>
+          </df>
+        </df>
+        <df name="BulletMultiThreaded">
+          <df name="CMakeFiles">
+          </df>
+          <df name="GpuSoftBodySolvers">
+            <df name="CMakeFiles">
+            </df>
+            <df name="CPU">
+              <df name="CMakeFiles">
+              </df>
+              <in>btSoftBodySolverData.h</in>
+              <in>btSoftBodySolver_CPU.cpp</in>
+              <in>btSoftBodySolver_CPU.h</in>
+            </df>
+            <df name="DX11">
+              <df name="HLSL">
+                <in>ApplyForces.hlsl</in>
+                <in>ComputeBounds.hlsl</in>
+                <in>Integrate.hlsl</in>
+                <in>OutputToVertexArray.hlsl</in>
+                <in>PrepareLinks.hlsl</in>
+                <in>SolvePositions.hlsl</in>
+                <in>SolvePositionsSIMDBatched.hlsl</in>
+                <in>UpdateConstants.hlsl</in>
+                <in>UpdateNodes.hlsl</in>
+                <in>UpdateNormals.hlsl</in>
+                <in>UpdatePositions.hlsl</in>
+                <in>UpdatePositionsFromVelocities.hlsl</in>
+                <in>VSolveLinks.hlsl</in>
+                <in>solveCollisionsAndUpdateVelocities.hlsl</in>
+                <in>solveCollisionsAndUpdateVelocitiesSIMDBatched.hlsl</in>
+              </df>
+              <in>btSoftBodySolverBuffer_DX11.h</in>
+              <in>btSoftBodySolverLinkData_DX11.h</in>
+              <in>btSoftBodySolverLinkData_DX11SIMDAware.h</in>
+              <in>btSoftBodySolverTriangleData_DX11.h</in>
+              <in>btSoftBodySolverVertexBuffer_DX11.h</in>
+              <in>btSoftBodySolverVertexData_DX11.h</in>
+              <in>btSoftBodySolver_DX11.cpp</in>
+              <in>btSoftBodySolver_DX11.h</in>
+              <in>btSoftBodySolver_DX11SIMDAware.cpp</in>
+              <in>btSoftBodySolver_DX11SIMDAware.h</in>
+            </df>
+            <df name="OpenCL">
+              <df name="AMD">
+              </df>
+              <df name="Apple">
+              </df>
+              <df name="CMakeFiles">
+              </df>
+              <df name="Intel">
+                <df name="CMakeFiles">
+                </df>
+              </df>
+              <df name="MiniCL">
+                <df name="CMakeFiles">
+                </df>
+                <in>MiniCLTaskWrap.cpp</in>
+              </df>
+              <df name="NVidia">
+                <df name="CMakeFiles">
+                </df>
+              </df>
+              <df name="OpenCLC">
+                <in>ApplyForces.cl</in>
+                <in>ComputeBounds.cl</in>
+                <in>Integrate.cl</in>
+                <in>OutputToVertexArray.cl</in>
+                <in>PrepareLinks.cl</in>
+                <in>SolveCollisionsAndUpdateVelocities.cl</in>
+                <in>SolveCollisionsAndUpdateVelocitiesSIMDBatched.cl</in>
+                <in>SolvePositions.cl</in>
+                <in>SolvePositionsSIMDBatched.cl</in>
+                <in>UpdateConstants.cl</in>
+                <in>UpdateNodes.cl</in>
+                <in>UpdateNormals.cl</in>
+                <in>UpdatePositions.cl</in>
+                <in>UpdatePositionsFromVelocities.cl</in>
+                <in>VSolveLinks.cl</in>
+              </df>
+              <df name="OpenCLC10">
+                <in>ApplyForces.cl</in>
+                <in>ComputeBounds.cl</in>
+                <in>Integrate.cl</in>
+                <in>OutputToVertexArray.cl</in>
+                <in>PrepareLinks.cl</in>
+                <in>SolveCollisionsAndUpdateVelocities.cl</in>
+                <in>SolveCollisionsAndUpdateVelocitiesSIMDBatched.cl</in>
+                <in>SolvePositions.cl</in>
+                <in>SolvePositionsSIMDBatched.cl</in>
+                <in>UpdateConstants.cl</in>
+                <in>UpdateNodes.cl</in>
+                <in>UpdateNormals.cl</in>
+                <in>UpdatePositions.cl</in>
+                <in>UpdatePositionsFromVelocities.cl</in>
+                <in>VSolveLinks.cl</in>
+              </df>
+              <in>btSoftBodySolverBuffer_OpenCL.h</in>
+              <in>btSoftBodySolverLinkData_OpenCL.h</in>
+              <in>btSoftBodySolverLinkData_OpenCLSIMDAware.h</in>
+              <in>btSoftBodySolverOutputCLtoGL.cpp</in>
+              <in>btSoftBodySolverOutputCLtoGL.h</in>
+              <in>btSoftBodySolverTriangleData_OpenCL.h</in>
+              <in>btSoftBodySolverVertexBuffer_OpenGL.h</in>
+              <in>btSoftBodySolverVertexData_OpenCL.h</in>
+              <in>btSoftBodySolver_OpenCL.cpp</in>
+              <in>btSoftBodySolver_OpenCL.h</in>
+              <in>btSoftBodySolver_OpenCLSIMDAware.cpp</in>
+              <in>btSoftBodySolver_OpenCLSIMDAware.h</in>
+            </df>
+          </df>
+          <df name="out">
+          </df>
+          <df name="SpuNarrowPhaseCollisionTask">
+            <in>Box.h</in>
+            <in>SpuCollisionShapes.cpp</in>
+            <in>SpuCollisionShapes.h</in>
+            <in>SpuContactResult.cpp</in>
+            <in>SpuContactResult.h</in>
+            <in>SpuConvexPenetrationDepthSolver.h</in>
+            <in>SpuGatheringCollisionTask.cpp</in>
+            <in>SpuGatheringCollisionTask.h</in>
+            <in>SpuLocalSupport.h</in>
+            <in>SpuMinkowskiPenetrationDepthSolver.cpp</in>
+            <in>SpuMinkowskiPenetrationDepthSolver.h</in>
+            <in>SpuPreferredPenetrationDirections.h</in>
+            <in>boxBoxDistance.cpp</in>
+            <in>boxBoxDistance.h</in>
+          </df>
+          <df name="SpuSampleTask">
+            <in>SpuSampleTask.cpp</in>
+            <in>SpuSampleTask.h</in>
+          </df>
+          <in>HeapManager.h</in>
+          <in>PlatformDefinitions.h</in>
+          <in>PosixThreadSupport.cpp</in>
+          <in>PosixThreadSupport.h</in>
+          <in>PpuAddressSpace.h</in>
+          <in>SequentialThreadSupport.cpp</in>
+          <in>SequentialThreadSupport.h</in>
+          <in>SpuCollisionObjectWrapper.cpp</in>
+          <in>SpuCollisionObjectWrapper.h</in>
+          <in>SpuCollisionTaskProcess.cpp</in>
+          <in>SpuCollisionTaskProcess.h</in>
+          <in>SpuContactManifoldCollisionAlgorithm.cpp</in>
+          <in>SpuContactManifoldCollisionAlgorithm.h</in>
+          <in>SpuDoubleBuffer.h</in>
+          <in>SpuFakeDma.cpp</in>
+          <in>SpuFakeDma.h</in>
+          <in>SpuGatheringCollisionDispatcher.cpp</in>
+          <in>SpuGatheringCollisionDispatcher.h</in>
+          <in>SpuLibspe2Support.cpp</in>
+          <in>SpuLibspe2Support.h</in>
+          <in>SpuSampleTaskProcess.cpp</in>
+          <in>SpuSampleTaskProcess.h</in>
+          <in>SpuSync.h</in>
+          <in>TrbDynBody.h</in>
+          <in>TrbStateVec.h</in>
+          <in>Win32ThreadSupport.cpp</in>
+          <in>Win32ThreadSupport.h</in>
+          <in>btGpu3DGridBroadphase.cpp</in>
+          <in>btGpu3DGridBroadphase.h</in>
+          <in>btGpu3DGridBroadphaseSharedCode.h</in>
+          <in>btGpu3DGridBroadphaseSharedDefs.h</in>
+          <in>btGpu3DGridBroadphaseSharedTypes.h</in>
+          <in>btGpuDefines.h</in>
+          <in>btGpuUtilsSharedCode.h</in>
+          <in>btGpuUtilsSharedDefs.h</in>
+          <in>btParallelConstraintSolver.cpp</in>
+          <in>btParallelConstraintSolver.h</in>
+          <in>btThreadSupportInterface.cpp</in>
+          <in>btThreadSupportInterface.h</in>
+          <in>vectormath2bullet.h</in>
+        </df>
+        <df name="BulletSoftBody">
+          <df name="CMakeFiles">
+          </df>
+          <in>btDefaultSoftBodySolver.cpp</in>
+          <in>btDefaultSoftBodySolver.h</in>
+          <in>btSoftBody.cpp</in>
+          <in>btSoftBody.h</in>
+          <in>btSoftBodyConcaveCollisionAlgorithm.cpp</in>
+          <in>btSoftBodyConcaveCollisionAlgorithm.h</in>
+          <in>btSoftBodyData.h</in>
+          <in>btSoftBodyHelpers.cpp</in>
+          <in>btSoftBodyHelpers.h</in>
+          <in>btSoftBodyInternals.h</in>
+          <in>btSoftBodyRigidBodyCollisionConfiguration.cpp</in>
+          <in>btSoftBodyRigidBodyCollisionConfiguration.h</in>
+          <in>btSoftBodySolverVertexBuffer.h</in>
+          <in>btSoftBodySolvers.h</in>
+          <in>btSoftRigidCollisionAlgorithm.cpp</in>
+          <in>btSoftRigidCollisionAlgorithm.h</in>
+          <in>btSoftRigidDynamicsWorld.cpp</in>
+          <in>btSoftRigidDynamicsWorld.h</in>
+          <in>btSoftSoftCollisionAlgorithm.cpp</in>
+          <in>btSoftSoftCollisionAlgorithm.h</in>
+          <in>btSparseSDF.h</in>
+        </df>
+        <df name="CMakeFiles">
+        </df>
+        <df name="ibmsdk">
+        </df>
+        <df name="LinearMath">
+          <df name="CMakeFiles">
+          </df>
+          <df name="ibmsdk">
+          </df>
+          <in>btAabbUtil2.h</in>
+          <in>btAlignedAllocator.cpp</in>
+          <in>btAlignedAllocator.h</in>
+          <in>btAlignedObjectArray.h</in>
+          <in>btConvexHull.cpp</in>
+          <in>btConvexHull.h</in>
+          <in>btConvexHullComputer.cpp</in>
+          <in>btConvexHullComputer.h</in>
+          <in>btDefaultMotionState.h</in>
+          <in>btGeometryUtil.cpp</in>
+          <in>btGeometryUtil.h</in>
+          <in>btGrahamScan2dConvexHull.h</in>
+          <in>btHashMap.h</in>
+          <in>btIDebugDraw.h</in>
+          <in>btList.h</in>
+          <in>btMatrix3x3.h</in>
+          <in>btMinMax.h</in>
+          <in>btMotionState.h</in>
+          <in>btPoolAllocator.h</in>
+          <in>btQuadWord.h</in>
+          <in>btQuaternion.h</in>
+          <in>btQuickprof.cpp</in>
+          <in>btQuickprof.h</in>
+          <in>btRandom.h</in>
+          <in>btScalar.h</in>
+          <in>btSerializer.cpp</in>
+          <in>btSerializer.h</in>
+          <in>btStackAlloc.h</in>
+          <in>btTransform.h</in>
+          <in>btTransformUtil.h</in>
+          <in>btVector3.h</in>
+        </df>
+        <df name="MiniCL">
+          <df name="CMakeFiles">
+          </df>
+          <df name="MiniCLTask">
+            <in>MiniCLTask.cpp</in>
+            <in>MiniCLTask.h</in>
+          </df>
+          <in>MiniCL.cpp</in>
+          <in>MiniCLTaskScheduler.cpp</in>
+          <in>MiniCLTaskScheduler.h</in>
+          <in>cl.h</in>
+          <in>cl_MiniCL_Defs.h</in>
+          <in>cl_gl.h</in>
+          <in>cl_platform.h</in>
+        </df>
+        <df name="vectormath">
+          <df name="scalar">
+            <in>boolInVec.h</in>
+            <in>floatInVec.h</in>
+            <in>mat_aos.h</in>
+            <in>quat_aos.h</in>
+            <in>vec_aos.h</in>
+            <in>vectormath_aos.h</in>
+          </df>
+          <df name="sse">
+            <in>boolInVec.h</in>
+            <in>floatInVec.h</in>
+            <in>mat_aos.h</in>
+            <in>quat_aos.h</in>
+            <in>vec_aos.h</in>
+            <in>vecidx_aos.h</in>
+            <in>vectormath_aos.h</in>
+          </df>
+          <in>vmInclude.h</in>
+        </df>
+        <in>Bullet-C-Api.h</in>
+        <in>btBulletCollisionCommon.h</in>
+        <in>btBulletDynamicsCommon.h</in>
+      </df>
+      <df name="UnitTests">
+        <df name="BulletUnitTests">
+          <in>Main.cpp</in>
+          <in>TestBulletOnly.h</in>
+          <in>TestLinearMath.h</in>
+        </df>
+        <df name="cppunit">
+          <df name="include">
+            <df name="cppunit">
+              <df name="config">
+                <in>CppUnitApi.h</in>
+                <in>SelectDllLoader.h</in>
+                <in>SourcePrefix.h</in>
+                <in>config-bcb5.h</in>
+                <in>config-evc4.h</in>
+                <in>config-mac.h</in>
+                <in>config-msvc6.h</in>
+              </df>
+              <df name="extensions">
+                <in>AutoRegisterSuite.h</in>
+                <in>ExceptionTestCaseDecorator.h</in>
+                <in>HelperMacros.h</in>
+                <in>Orthodox.h</in>
+                <in>RepeatedTest.h</in>
+                <in>TestCaseDecorator.h</in>
+                <in>TestDecorator.h</in>
+                <in>TestFactory.h</in>
+                <in>TestFactoryRegistry.h</in>
+                <in>TestFixtureFactory.h</in>
+                <in>TestNamer.h</in>
+                <in>TestSetUp.h</in>
+                <in>TestSuiteBuilderContext.h</in>
+                <in>TestSuiteFactory.h</in>
+                <in>TypeInfoHelper.h</in>
+                <in>XmlInputHelper.h</in>
+              </df>
+              <df name="plugin">
+                <in>DynamicLibraryManager.h</in>
+                <in>DynamicLibraryManagerException.h</in>
+                <in>PlugInManager.h</in>
+                <in>PlugInParameters.h</in>
+                <in>TestPlugIn.h</in>
+                <in>TestPlugInDefaultImpl.h</in>
+              </df>
+              <df name="portability">
+                <in>CppUnitDeque.h</in>
+                <in>CppUnitMap.h</in>
+                <in>CppUnitSet.h</in>
+                <in>CppUnitStack.h</in>
+                <in>CppUnitVector.h</in>
+                <in>FloatingPoint.h</in>
+                <in>Stream.h</in>
+              </df>
+              <df name="tools">
+                <in>Algorithm.h</in>
+                <in>StringTools.h</in>
+                <in>XmlDocument.h</in>
+                <in>XmlElement.h</in>
+              </df>
+              <df name="ui">
+                <df name="text">
+                  <in>TestRunner.h</in>
+                  <in>TextTestRunner.h</in>
+                </df>
+              </df>
+              <in>AdditionalMessage.h</in>
+              <in>Asserter.h</in>
+              <in>BriefTestProgressListener.h</in>
+              <in>CompilerOutputter.h</in>
+              <in>Exception.h</in>
+              <in>Message.h</in>
+              <in>Outputter.h</in>
+              <in>Portability.h</in>
+              <in>Protector.h</in>
+              <in>SourceLine.h</in>
+              <in>SynchronizedObject.h</in>
+              <in>Test.h</in>
+              <in>TestAssert.h</in>
+              <in>TestCaller.h</in>
+              <in>TestCase.h</in>
+              <in>TestComposite.h</in>
+              <in>TestFailure.h</in>
+              <in>TestFixture.h</in>
+              <in>TestLeaf.h</in>
+              <in>TestListener.h</in>
+              <in>TestPath.h</in>
+              <in>TestResult.h</in>
+              <in>TestResultCollector.h</in>
+              <in>TestRunner.h</in>
+              <in>TestSuccessListener.h</in>
+              <in>TestSuite.h</in>
+              <in>TextOutputter.h</in>
+              <in>TextTestProgressListener.h</in>
+              <in>TextTestResult.h</in>
+              <in>TextTestRunner.h</in>
+              <in>XmlOutputter.h</in>
+              <in>XmlOutputterHook.h</in>
+              <in>config-auto.h</in>
+            </df>
+          </df>
+          <df name="src">
+            <df name="cppunit">
+              <in>AdditionalMessage.cpp</in>
+              <in>Asserter.cpp</in>
+              <in>BeOsDynamicLibraryManager.cpp</in>
+              <in>BriefTestProgressListener.cpp</in>
+              <in>CompilerOutputter.cpp</in>
+              <in>DefaultProtector.cpp</in>
+              <in>DefaultProtector.h</in>
+              <in>DllMain.cpp</in>
+              <in>DynamicLibraryManager.cpp</in>
+              <in>DynamicLibraryManagerException.cpp</in>
+              <in>Exception.cpp</in>
+              <in>Message.cpp</in>
+              <in>PlugInManager.cpp</in>
+              <in>PlugInParameters.cpp</in>
+              <in>Protector.cpp</in>
+              <in>ProtectorChain.cpp</in>
+              <in>ProtectorChain.h</in>
+              <in>ProtectorContext.h</in>
+              <in>RepeatedTest.cpp</in>
+              <in>ShlDynamicLibraryManager.cpp</in>
+              <in>SourceLine.cpp</in>
+              <in>StringTools.cpp</in>
+              <in>SynchronizedObject.cpp</in>
+              <in>Test.cpp</in>
+              <in>TestAssert.cpp</in>
+              <in>TestCase.cpp</in>
+              <in>TestCaseDecorator.cpp</in>
+              <in>TestComposite.cpp</in>
+              <in>TestDecorator.cpp</in>
+              <in>TestFactoryRegistry.cpp</in>
+              <in>TestFailure.cpp</in>
+              <in>TestLeaf.cpp</in>
+              <in>TestNamer.cpp</in>
+              <in>TestPath.cpp</in>
+              <in>TestPlugInDefaultImpl.cpp</in>
+              <in>TestResult.cpp</in>
+              <in>TestResultCollector.cpp</in>
+              <in>TestRunner.cpp</in>
+              <in>TestSetUp.cpp</in>
+              <in>TestSuccessListener.cpp</in>
+              <in>TestSuite.cpp</in>
+              <in>TestSuiteBuilderContext.cpp</in>
+              <in>TextOutputter.cpp</in>
+              <in>TextTestProgressListener.cpp</in>
+              <in>TextTestResult.cpp</in>
+              <in>TextTestRunner.cpp</in>
+              <in>TypeInfoHelper.cpp</in>
+              <in>UnixDynamicLibraryManager.cpp</in>
+              <in>Win32DynamicLibraryManager.cpp</in>
+              <in>XmlDocument.cpp</in>
+              <in>XmlElement.cpp</in>
+              <in>XmlOutputter.cpp</in>
+              <in>XmlOutputterHook.cpp</in>
+            </df>
+          </df>
+        </df>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>CMakeLists.txt</itemPath>
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>build</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -j8 -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -j8 -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+      </makefileType>
+      <item path="Demos/DX11ClothDemo/cloth_renderer_PS.hlsl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="Demos/DX11ClothDemo/cloth_renderer_VS.hlsl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="Demos/OpenCLClothDemo/shaders.cl" ex="true" tool="3" flavor="0">
+      </item>
+      <item path="Extras/sph/fluids/fluid_system_kern.cuh"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="Extras/sph/fluids/radixsort.cuh" ex="true" tool="3" flavor="0">
+      </item>
+      <item path="Extras/sph/main.cpp" ex="false" tool="1" flavor="0">
+        <ccTool>
+          <incDir>
+            <pElem>Extras/sph/fluids</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/BulletMultiThreaded/GpuSoftBodySolvers/DX11/HLSL/solveCollisionsAndUpdateVelocities.hlsl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="src/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC/ApplyForces.cl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="src/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC/ComputeBounds.cl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="src/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC/Integrate.cl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="src/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC/OutputToVertexArray.cl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="src/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC/PrepareLinks.cl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="src/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC/SolveCollisionsAndUpdateVelocities.cl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="src/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC/SolveCollisionsAndUpdateVelocitiesSIMDBatched.cl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="src/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC/SolvePositions.cl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="src/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC/SolvePositionsSIMDBatched.cl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="src/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC/UpdateConstants.cl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="src/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC/UpdateNodes.cl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="src/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC/UpdateNormals.cl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="src/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC/UpdatePositions.cl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="src/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC/UpdatePositionsFromVelocities.cl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="src/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC/VSolveLinks.cl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+      <item path="src/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC10/ComputeBounds.cl"
+            ex="true"
+            tool="3"
+            flavor="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

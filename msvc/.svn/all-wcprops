@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/!svn/ver/2435/trunk/msvc
+END
+vs2010.bat
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2418/trunk/msvc/vs2010.bat
+END
+findOpenCL.lua
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2418/trunk/msvc/findOpenCL.lua
+END
+vs2008_dx11.bat
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2435/trunk/msvc/vs2008_dx11.bat
+END
+vs2005.bat
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2418/trunk/msvc/vs2005.bat
+END
+findDirectX11.lua
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2418/trunk/msvc/findDirectX11.lua
+END
+vs_all.bat
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2435/trunk/msvc/vs_all.bat
+END
+vs2008.bat
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2418/trunk/msvc/vs2008.bat
+END
+premake4.exe
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2418/trunk/msvc/premake4.exe
+END
+premake4.lua
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2435/trunk/msvc/premake4.lua
+END
+bullet.rc
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2418/trunk/msvc/bullet.rc
+END
+bullet_ico.ico
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/99/trunk/msvc/bullet_ico.ico
+END
+autoexp_dat.txt
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/1633/trunk/msvc/autoexp_dat.txt
+END
