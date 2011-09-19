@@ -21,6 +21,7 @@ IF (USE_GLUT)
 			MultiMaterialDemo SerializeDemo InternalEdgeDemo 
 			MultiThreadedDemo
 			ParticlesOpenCL
+			SPHDemo
 			OpenCLClothDemo
 			)
 		ELSE()
