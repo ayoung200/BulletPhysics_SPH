@@ -24,6 +24,7 @@ subject to the following restrictions:
 #include <OpenGL/OpenGL.h>
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
+#include <OpenGL/glext.h>
 #include <GLUT/glut.h>
 #else
 
@@ -32,9 +33,13 @@ subject to the following restrictions:
 #include <windows.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
+#include <GL/glext.h>
 #else
 #include <GL/gl.h>
 #include <GL/glut.h>
+//FIXME: This is a hack to get FBOs to work without having to include glew.h
+//#define GL_GLEXT_PROTOTYPES 
+//#include <GL/glext.h>
 #endif //_WINDOWS
 #endif //APPLE
 

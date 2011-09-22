@@ -584,6 +584,7 @@ void GL_ShapeDrawer::drawOpenGL(btScalar* m, const btCollisionShape* shape, cons
 
 				case BOX_SHAPE_PROXYTYPE:
 				{
+                                    
 					const btBoxShape* boxShape = static_cast<const btBoxShape*>(shape);
 					btVector3 halfExtent = boxShape->getHalfExtentsWithMargin();
 					
