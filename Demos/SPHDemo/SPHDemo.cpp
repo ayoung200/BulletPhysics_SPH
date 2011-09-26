@@ -35,6 +35,10 @@ subject to the following restrictions:
 #include "btBulletDynamicsCommon.h"
 //#include <RTPS.h>
 //#include <RTPSettings.h>
+#include "../GimpactTestDemo/BunnyMesh.h"
+
+static int gIndices[BUNNY_NUM_TRIANGLES*3];
+
 
 #include <stdio.h> //printf debugging
 
@@ -152,23 +156,44 @@ void	SPHDemo::initPhysics()
 	{
 		//create a few dynamic rigidbodies
 		// Re-using the same collision is better for memory usage and performance
-
-		btCollisionShape* colShape = new btBoxShape(btVector3(SCALING*1,SCALING*1,SCALING*1));
+            printf("Here at %s:%d\n",__FILE__,__LINE__);
+            for(int i = 0; i<BUNNY_NUM_TRIANGLES;i++)
+            {
+                printf("i = %d\n",i);
+                gIndices[(i*3)]=gIndicesBunny[i][0];
+                gIndices[(i*3)+1]=gIndicesBunny[i][1];
+                gIndices[(i*3)+2]=gIndicesBunny[i][2];
+            }
+                btIndexedMesh* mesh = new btIndexedMesh;
+                mesh->m_numTriangles = BUNNY_NUM_TRIANGLES;
+                mesh->m_numVertices = BUNNY_NUM_VERTICES;
+                mesh->m_triangleIndexBase = (unsigned char*)gIndices;
+                mesh->m_triangleIndexStride = 3*sizeof(int);
+                mesh->m_vertexBase = (unsigned char*)gVerticesBunny;
+                mesh->m_vertexStride = 3*sizeof(btScalar);
+                printf("Here at %s:%d\n",__FILE__,__LINE__);
+                btTriangleIndexVertexArray* tmesh = new btTriangleIndexVertexArray();
+                printf("Here at %s:%d\n",__FILE__,__LINE__);
+                tmesh->addIndexedMesh(*mesh);
+		//btCollisionShape* colShape = new btBoxShape(btVector3(SCALING*1,SCALING*1,SCALING*1));
 		//btCollisionShape* colShape = new btSphereShape(btScalar(1.));
+                printf("Here at %s:%d\n",__FILE__,__LINE__);
+                btCollisionShape* colShape = new btBvhTriangleMeshShape(tmesh,false);
+                printf("Here at %s:%d\n",__FILE__,__LINE__);
 		m_collisionShapes.push_back(colShape);
-
+printf("Here at %s:%d\n",__FILE__,__LINE__);
 		/// Create Dynamic Objects
 		btTransform startTransform;
 		startTransform.setIdentity();
 
-		btScalar	mass(1.f);
+		btScalar	mass(10.f);
 
 		//rigidbody is dynamic if and only if mass is non zero, otherwise static
 		bool isDynamic = (mass != 0.f);
 
 		btVector3 localInertia(0,0,0);
-		if (isDynamic)
-			colShape->calculateLocalInertia(mass,localInertia);
+		//if (isDynamic)
+		//	colShape->calculateLocalInertia(mass,localInertia);
 
 		float start_x = START_POS_X - ARRAY_SIZE_X/2;
 		float start_y = START_POS_Y;
@@ -197,6 +222,7 @@ void	SPHDemo::initPhysics()
 			}
 		}
 	}
+printf("Here at %s:%d\n",__FILE__,__LINE__);
 
 }
 
@@ -209,6 +235,7 @@ void    SPHDemo::myinit()
     DemoApplication::myinit();
     if(!m_rtps)
     {
+printf("Here at %s:%d\n",__FILE__,__LINE__);
         rtps::Domain* grid = new rtps::Domain(rtps::float4(0,0,0,0), rtps::float4(5, 5, 5, 0));
         rtps::RTPSettings* settings = new rtps::RTPSettings(rtps::RTPSettings::SPH, m_numParticles, m_timestep, grid);
     
@@ -221,6 +248,7 @@ void    SPHDemo::myinit()
             settings->SetSetting("rtps_path", "/home/andrew/School/Research/Bullet/BulletPhysics_SPH/Demos/SPHDemo/EnjaParticles/build/bin/");
         #endif
 
+printf("Here at %s:%d\n",__FILE__,__LINE__);
         settings->setRenderType(rtps::RTPSettings::SCREEN_SPACE_RENDER);
         //settings->setRenderType(rtps::RTPSettings::RENDER);
         //settings.setRenderType(RTPSettings::SPRITE_RENDER);
@@ -254,11 +282,13 @@ void    SPHDemo::myinit()
         rtps::float4 color = rtps::float4(0.f, .5f,.75f, .05f);
         m_rtps->system->addBox(m_numParticles/2, min, max, false,color);
     }
+printf("Here at %s:%d\n",__FILE__,__LINE__);
     if(!m_voxelizedMesh)
     {
-        voxelizeMesh(m_dynamicsWorld->getCollisionObjectArray().at(1)->getCollisionShape(),256);
+        voxelizeMesh(m_dynamicsWorld->getCollisionObjectArray().at(1),256);
         m_voxelizedMesh=true;    
     }
+printf("Here at %s:%d\n",__FILE__,__LINE__);
 }
 
 void	SPHDemo::clientResetScene()
@@ -306,16 +336,18 @@ void	SPHDemo::exitPhysics()
 	delete m_collisionConfiguration;
 }
 
-void SPHDemo::voxelizeMesh(btCollisionShape* shape, int voxelResolution)
+void SPHDemo::voxelizeMesh(btCollisionObject* colObj, int voxelResolution)
 {
-    
+        btClock clk;
         btVector3 min,max;
+        btCollisionShape* shape = colObj->getCollisionShape();
         shape->getAabb(btTransform::getIdentity(),min,max);
         printf("min = (%f,%f,%f)\n",min.x(),min.y(),min.z());
         printf("max = (%f,%f,%f)\n",max.x(),max.y(),max.z());
-        //btVector3 dim = max-min;
+        btVector3 dim = (max-min)*btScalar(2.0);
         //printf("dim = (%f,%f,%f)\n",dim.x(),dim.y(),dim.z());
-        // switch to projection mode
+        
+printf("Here at %s:%d\n",__FILE__,__LINE__);
         
         glEnable(GL_TEXTURE_3D);
         GLuint tex;
@@ -329,9 +361,9 @@ void SPHDemo::voxelizeMesh(btCollisionShape* shape, int voxelResolution)
         glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_R, mode);
         glTexImage3D(GL_TEXTURE_3D, 0, GL_RGBA, voxelResolution, voxelResolution, voxelResolution, 0, GL_RGBA, GL_BYTE, 0);
         GLuint fboId = 0;
-        glGenFramebuffers(1, &fboId);
-        glBindFramebuffer(GL_FRAMEBUFFER,fboId);
-        glFramebufferTexture3D( GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0 ,
+        glGenFramebuffersEXT(1, &fboId);
+        glBindFramebufferEXT(GL_FRAMEBUFFER_EXT,fboId);
+        glFramebufferTexture3DEXT( GL_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT ,
                                GL_TEXTURE_3D, tex, 0, 0 );
         float col[4];
         glGetFloatv(GL_COLOR_CLEAR_VALUE,col);
@@ -346,29 +378,32 @@ void SPHDemo::voxelizeMesh(btCollisionShape* shape, int voxelResolution)
 
         double delz = (2.0*maxDim)/voxelResolution;
         int i = 0;
+        //FIXME: Code should check and preserve the current state so that
+        //It correctly restores previous state.
         glEnable(GL_BLEND);
         glBlendFunc(GL_ONE,GL_ONE);
         glLogicOp(GL_XOR);
         glDisable(GL_LIGHTING);
         glDisable(GL_DEPTH_TEST);
-
-
+        glDisable(GL_CULL_FACE);
+        unsigned long int start = clk.getTimeMilliseconds();
         glViewport(0,0,voxelResolution,voxelResolution);
         for(int i = 0; i<voxelResolution; i++)
         {
+            // switch to projection mode
             glMatrixMode(GL_PROJECTION);
             // save previous matrix which contains the 
             //settings for the perspective projection
             glPushMatrix();
             // reset matrix
             glLoadIdentity();
-            glFramebufferTexture3D( GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0 ,
+            glFramebufferTexture3DEXT( GL_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT ,
                                GL_TEXTURE_3D, tex, 0, i );
-            glDrawBuffer(GL_COLOR_ATTACHMENT0);
+            glDrawBuffer(GL_COLOR_ATTACHMENT0_EXT);
             glClear(GL_COLOR_BUFFER_BIT);
-            glFramebufferTexture3D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT1,
+            glFramebufferTexture3DEXT(GL_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT1_EXT,
                                 GL_TEXTURE_3D, tex, 0, i?i-1:0);
-            glReadBuffer(GL_COLOR_ATTACHMENT1);
+            glReadBuffer(GL_COLOR_ATTACHMENT1_EXT);
             // set a 2D orthographic projection
             //glOrtho(0, maxDim, 0, maxDim,delz*i*maxDim,delz*(i+1)*maxDim);
             glOrtho(-maxDim, maxDim, -maxDim, maxDim ,-maxDim+delz*i ,-maxDim+delz*(i+1));
@@ -390,13 +425,29 @@ void SPHDemo::voxelizeMesh(btCollisionShape* shape, int voxelResolution)
         glEnable(GL_LIGHTING);
         glDisable(GL_BLEND);
         glLogicOp(GL_COPY);
+        glEnable(GL_CULL_FACE);
+        unsigned long int end = clk.getTimeMilliseconds();
 //printf("Here at %s:%d\n",__FILE__,__LINE__);
-        glBindFramebuffer(GL_FRAMEBUFFER,0);
+        glBindFramebufferEXT(GL_FRAMEBUFFER_EXT,0);
         //glDrawBuffer(0);
         //glReadBuffer(0);
         glClearColor(col[0],col[1],col[2],col[3]);
         glDisable(GL_TEXTURE_3D);
         glMatrixMode(GL_MODELVIEW);
+printf("Here at %s:%d\n",__FILE__,__LINE__);
+        rtps::float4 ext = rtps::float4(dim.x(),dim.y(),dim.z(),0.0);
+        rtps::float4 minimum = rtps::float4(min.x(),min.y(),min.z(),0.0);
+        btRigidBody*		body=btRigidBody::upcast(colObj);
+        btScalar m[16];
+printf("Here at %s:%d\n",__FILE__,__LINE__);
+        if(body&&body->getMotionState())
+        {
+            btDefaultMotionState* myMotionState = (btDefaultMotionState*)body->getMotionState();
+            myMotionState->m_startWorldTrans.getOpenGLMatrix(m);
+            
+        }
+printf("Here at %s:%d\n",__FILE__,__LINE__);
+        m_rtps->system->addRigidBody(tex,ext,minimum,m,voxelResolution);
+printf("Here at %s:%d\n",__FILE__,__LINE__);
+        printf("time to voxelize = %ld\n",end-start);
 }
-
-

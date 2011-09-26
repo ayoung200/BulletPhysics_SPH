@@ -342,6 +342,12 @@
               </df>
             </df>
           </df>
+          <df name="SPHDemo">
+            <df name="CMakeFiles">
+              <df name="AppSPHDemo.dir">
+              </df>
+            </df>
+          </df>
           <df name="ThreadingDemo">
             <df name="CMakeFiles">
               <df name="AppThreadingDemo.dir">
@@ -1012,6 +1018,435 @@
           <in>SoftDemo.h</in>
           <in>bunny.inl</in>
           <in>cube.inl</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="SPHDemo">
+          <df name="CMakeFiles">
+          </df>
+          <df name="EnjaParticles">
+            <df name="build">
+              <df name="bin">
+                <df name="cl_common">
+                  <in>RadixSort.cl</in>
+                  <in>Scan_b.cl</in>
+                  <in>bitonic.cl</in>
+                  <in>cellindices.cl</in>
+                  <in>cl_hash.h</in>
+                  <in>cl_macros.h</in>
+                  <in>cl_structs.h</in>
+                  <in>hash.cl</in>
+                  <in>permute.cl</in>
+                </df>
+                <df name="cl_flock">
+                  <in>cl_hash.h</in>
+                  <in>cl_macros.h</in>
+                  <in>cl_neighbors.h</in>
+                  <in>cl_structs.h</in>
+                  <in>euler_integration.cl</in>
+                  <in>rule_alignment.cl</in>
+                  <in>rule_avoid.cl</in>
+                  <in>rule_cohesion.cl</in>
+                  <in>rule_goal.cl</in>
+                  <in>rule_leaderfollowing.cl</in>
+                  <in>rule_separation.cl</in>
+                  <in>rules.cl</in>
+                </df>
+                <df name="cl_simple">
+                  <in>euler.cl</in>
+                </df>
+                <df name="cl_sph">
+                  <in>cl_collision.h</in>
+                  <in>cl_density.h</in>
+                  <in>cl_force.h</in>
+                  <in>cl_hash.h</in>
+                  <in>cl_kernels.h</in>
+                  <in>cl_macros.h</in>
+                  <in>cl_neighbors.h</in>
+                  <in>cl_structs.h</in>
+                  <in>cl_surface_extraction.h</in>
+                  <in>cl_surface_tension.h</in>
+                  <in>cloud_euler.cl</in>
+                  <in>cloud_leapfrog.cl</in>
+                  <in>cloud_velocity.cl</in>
+                  <in>collision_cloud.cl</in>
+                  <in>collision_tri.cl</in>
+                  <in>collision_wall.cl</in>
+                  <in>density.cl</in>
+                  <in>euler.cl</in>
+                  <in>force.cl</in>
+                  <in>leapfrog.cl</in>
+                  <in>lifetime.cl</in>
+                  <in>lifetime_smoke.cl</in>
+                  <in>neighbors.cl</in>
+                  <in>prep.cl</in>
+                  <in>scopy.cl</in>
+                </df>
+                <df name="shaders">
+                  <in>curvature_flow.cl</in>
+                </df>
+              </df>
+              <df name="CMakeFiles">
+                <df name="CMakeTmp">
+                  <df name="CMakeFiles">
+                    <df name="cmTryCompileExec.dir">
+                    </df>
+                  </df>
+                </df>
+                <df name="CompilerIdC">
+                  <in>CMakeCCompilerId.c</in>
+                </df>
+                <df name="CompilerIdCXX">
+                  <in>CMakeCXXCompilerId.cpp</in>
+                </df>
+              </df>
+              <df name="rtpslib">
+                <df name="cl_common">
+                  <in>RadixSort.cl</in>
+                  <in>Scan_b.cl</in>
+                  <in>bitonic.cl</in>
+                  <in>cellindices.cl</in>
+                  <in>cl_hash.h</in>
+                  <in>cl_macros.h</in>
+                  <in>cl_structs.h</in>
+                  <in>hash.cl</in>
+                  <in>meshtoparticles.cl</in>
+                  <in>permute.cl</in>
+                </df>
+                <df name="cl_flock">
+                  <in>cl_hash.h</in>
+                  <in>cl_macros.h</in>
+                  <in>cl_neighbors.h</in>
+                  <in>cl_structs.h</in>
+                  <in>euler_integration.cl</in>
+                  <in>rule_alignment.cl</in>
+                  <in>rule_avoid.cl</in>
+                  <in>rule_cohesion.cl</in>
+                  <in>rule_goal.cl</in>
+                  <in>rule_leaderfollowing.cl</in>
+                  <in>rule_separation.cl</in>
+                  <in>rules.cl</in>
+                </df>
+                <df name="cl_simple">
+                  <in>euler.cl</in>
+                </df>
+                <df name="cl_sph">
+                  <in>cl_collision.h</in>
+                  <in>cl_density.h</in>
+                  <in>cl_force.h</in>
+                  <in>cl_hash.h</in>
+                  <in>cl_kernels.h</in>
+                  <in>cl_macros.h</in>
+                  <in>cl_neighbors.h</in>
+                  <in>cl_structs.h</in>
+                  <in>cl_surface_extraction.h</in>
+                  <in>cl_surface_tension.h</in>
+                  <in>cloud_euler.cl</in>
+                  <in>cloud_leapfrog.cl</in>
+                  <in>cloud_velocity.cl</in>
+                  <in>collision_cloud.cl</in>
+                  <in>collision_tri.cl</in>
+                  <in>collision_wall.cl</in>
+                  <in>density.cl</in>
+                  <in>euler.cl</in>
+                  <in>force.cl</in>
+                  <in>leapfrog.cl</in>
+                  <in>lifetime.cl</in>
+                  <in>lifetime_smoke.cl</in>
+                  <in>neighbors.cl</in>
+                  <in>prep.cl</in>
+                  <in>scopy.cl</in>
+                </df>
+                <df name="CMakeFiles">
+                  <df name="doc.dir">
+                  </df>
+                  <df name="rtps.dir">
+                    <df name="domain">
+                    </df>
+                    <df name="opencl">
+                    </df>
+                    <df name="render">
+                      <df name="util">
+                      </df>
+                    </df>
+                    <df name="system">
+                      <df name="common">
+                      </df>
+                      <df name="flock">
+                      </df>
+                      <df name="simple">
+                      </df>
+                      <df name="sph">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+                <df name="html">
+                </df>
+                <df name="shaders">
+                  <in>curvature_flow.cl</in>
+                </df>
+                <df name="system">
+                  <df name="common">
+                    <df name="CMakeFiles">
+                    </df>
+                  </df>
+                  <df name="flock">
+                    <df name="CMakeFiles">
+                    </df>
+                  </df>
+                  <df name="simple">
+                    <df name="CMakeFiles">
+                    </df>
+                  </df>
+                  <df name="sph">
+                    <df name="CMakeFiles">
+                    </df>
+                  </df>
+                </df>
+              </df>
+              <df name="test">
+                <df name="CMakeFiles">
+                  <df name="flock.x.dir">
+                  </df>
+                  <df name="multi.x.dir">
+                  </df>
+                  <df name="simple.x.dir">
+                  </df>
+                  <df name="sph.x.dir">
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="cmake">
+            </df>
+            <df name="opencl10">
+              <df name="CL">
+                <in>cl.h</in>
+                <in>cl.hpp</in>
+                <in>cl_d3d10.h</in>
+                <in>cl_ext.h</in>
+                <in>cl_gl.h</in>
+                <in>cl_gl_ext.h</in>
+                <in>cl_platform.h</in>
+                <in>opencl.h</in>
+              </df>
+            </df>
+            <df name="rtpslib">
+              <df name="doc">
+              </df>
+              <df name="domain">
+                <in>Domain.cpp</in>
+                <in>Domain.h</in>
+                <in>IV.cpp</in>
+                <in>IV.h</in>
+                <in>UniformGrid.cpp</in>
+                <in>UniformGrid.h</in>
+              </df>
+              <df name="opencl">
+                <in>Buffer.cpp</in>
+                <in>Buffer.h</in>
+                <in>CLL.cpp</in>
+                <in>CLL.h</in>
+                <in>Kernel.cpp</in>
+                <in>Kernel.h</in>
+                <in>Program.cpp</in>
+                <in>Program.h</in>
+              </df>
+              <df name="render">
+                <df name="shaders">
+                  <in>curvature_flow.cl</in>
+                </df>
+                <df name="util">
+                  <in>stb_image.c</in>
+                  <in>stb_image.h</in>
+                  <in>stb_image_write.h</in>
+                </df>
+                <in>Render.cpp</in>
+                <in>Render.h</in>
+                <in>SSFRender.cpp</in>
+                <in>SSFRender.h</in>
+                <in>Sphere3DRender.cpp</in>
+                <in>Sphere3DRender.h</in>
+                <in>SpriteRender.cpp</in>
+                <in>SpriteRender.h</in>
+                <in>shaders.cpp</in>
+              </df>
+              <df name="system">
+                <df name="common">
+                  <df name="cl_src">
+                    <in>RadixSort.cl</in>
+                    <in>Scan_b.cl</in>
+                    <in>bitonic.cl</in>
+                    <in>cl_hash.h</in>
+                    <in>cl_macros.h</in>
+                    <in>cl_structs.h</in>
+                    <in>hash.cl</in>
+                    <in>meshtoparticles.cl</in>
+                    <in>permute.cl</in>
+                  </df>
+                  <in>BitonicSort.cpp</in>
+                  <in>BitonicSort.h</in>
+                  <in>CellIndices.cpp</in>
+                  <in>CellIndices.h</in>
+                  <in>CloudBitonicSort.h</in>
+                  <in>CloudPermute.cpp</in>
+                  <in>CloudPermute.h</in>
+                  <in>Hash.cpp</in>
+                  <in>Hash.h</in>
+                  <in>Hose.cpp</in>
+                  <in>Hose.h</in>
+                  <in>MeshToParticles.cpp</in>
+                  <in>MeshToParticles.h</in>
+                  <in>Permute.cpp</in>
+                  <in>Permute.h</in>
+                  <in>Radix.cpp</in>
+                  <in>Radix.h</in>
+                </df>
+                <df name="flock">
+                  <df name="cl_src">
+                    <in>cl_hash.h</in>
+                    <in>cl_macros.h</in>
+                    <in>cl_neighbors.h</in>
+                    <in>cl_structs.h</in>
+                    <in>euler_integration.cl</in>
+                    <in>rule_alignment.cl</in>
+                    <in>rule_avoid.cl</in>
+                    <in>rule_cohesion.cl</in>
+                    <in>rule_goal.cl</in>
+                    <in>rule_leaderfollowing.cl</in>
+                    <in>rule_separation.cl</in>
+                    <in>rules.cl</in>
+                  </df>
+                  <in>EulerIntegration.cpp</in>
+                  <in>EulerIntegration.h</in>
+                  <in>Rules.cpp</in>
+                  <in>Rules.h</in>
+                  <in>Sort.cpp</in>
+                </df>
+                <df name="simple">
+                  <df name="cl_src">
+                    <in>euler.cl</in>
+                  </df>
+                  <in>Collision.cpp</in>
+                  <in>Euler.cpp</in>
+                  <in>ForceField.cpp</in>
+                  <in>cl_structs.h</in>
+                  <in>euler_cl.cpp</in>
+                  <in>forcefield_cl.cpp</in>
+                  <in>test.h</in>
+                </df>
+                <df name="sph">
+                  <df name="cl_src">
+                    <in>cl_collision.h</in>
+                    <in>cl_density.h</in>
+                    <in>cl_force.h</in>
+                    <in>cl_hash.h</in>
+                    <in>cl_kernels.h</in>
+                    <in>cl_macros.h</in>
+                    <in>cl_neighbors.h</in>
+                    <in>cl_structs.h</in>
+                    <in>cl_surface_extraction.h</in>
+                    <in>cl_surface_tension.h</in>
+                    <in>cloud_euler.cl</in>
+                    <in>cloud_leapfrog.cl</in>
+                    <in>cloud_velocity.cl</in>
+                    <in>collision_cloud.cl</in>
+                    <in>collision_tri.cl</in>
+                    <in>collision_wall.cl</in>
+                    <in>density.cl</in>
+                    <in>euler.cl</in>
+                    <in>force.cl</in>
+                    <in>leapfrog.cl</in>
+                    <in>lifetime.cl</in>
+                    <in>lifetime_smoke.cl</in>
+                    <in>neighbors.cl</in>
+                    <in>prep.cl</in>
+                    <in>scopy.cl</in>
+                  </df>
+                  <in>CloudDataStructures.cpp</in>
+                  <in>CloudDataStructures.h</in>
+                  <in>CloudEuler.cpp</in>
+                  <in>CloudEuler.h</in>
+                  <in>CloudVelocity.cpp</in>
+                  <in>CloudVelocity.h</in>
+                  <in>Collision_cloud.cpp</in>
+                  <in>Collision_cloud.h</in>
+                  <in>Collision_triangle.cpp</in>
+                  <in>Collision_triangle.h</in>
+                  <in>Collision_wall.cpp</in>
+                  <in>Collision_wall.h</in>
+                  <in>DataStructures.cpp</in>
+                  <in>DataStructures.h</in>
+                  <in>Density.cpp</in>
+                  <in>Density.h</in>
+                  <in>Euler.cpp</in>
+                  <in>Euler.h</in>
+                  <in>Force.cpp</in>
+                  <in>Force.h</in>
+                  <in>Kernels.cpp</in>
+                  <in>LeapFrog.cpp</in>
+                  <in>LeapFrog.h</in>
+                  <in>Lifetime.cpp</in>
+                  <in>Lifetime.h</in>
+                  <in>Neighbors.cpp</in>
+                  <in>Prep.cpp</in>
+                  <in>Prep.h</in>
+                  <in>Pressure.cpp</in>
+                  <in>Scopy.cpp</in>
+                  <in>Viscosity.cpp</in>
+                  <in>XSPH.cpp</in>
+                </df>
+                <in>FLOCK.cpp</in>
+                <in>FLOCK.h</in>
+                <in>FLOCKSettings.cpp</in>
+                <in>FLOCKSettings.h</in>
+                <in>ForceField.h</in>
+                <in>SPH.cpp</in>
+                <in>SPH.h</in>
+                <in>SPHSettings.cpp</in>
+                <in>SPHSettings.h</in>
+                <in>Simple.cpp</in>
+                <in>Simple.h</in>
+                <in>System.h</in>
+                <in>boids.cpp</in>
+                <in>boids.h</in>
+              </df>
+              <df name="utils">
+              </df>
+              <in>RTPS.cpp</in>
+              <in>RTPS.h</in>
+              <in>RTPSettings.cpp</in>
+              <in>RTPSettings.h</in>
+              <in>gtod_windows.cpp</in>
+              <in>gtod_windows.h</in>
+              <in>materials_lights.h</in>
+              <in>rtps_common.h</in>
+              <in>structs.cpp</in>
+              <in>structs.h</in>
+              <in>timege.cpp</in>
+              <in>timege.h</in>
+              <in>timer_eb.cpp</in>
+              <in>timer_eb.h</in>
+              <in>util.cpp</in>
+              <in>util.h</in>
+            </df>
+            <df name="test">
+              <df name="timings">
+              </df>
+              <in>main.cpp</in>
+              <in>main_flock.cpp</in>
+              <in>main_multi.cpp</in>
+              <in>main_simple.cpp</in>
+            </df>
+          </df>
+          <in>SPHDemo.cpp</in>
+          <in>SPHDemo.h</in>
+          <in>Win32SPHDemo.cpp</in>
+          <in>btOpenCLSupport.h</in>
+          <in>cl_cloth_demo.cpp</in>
+          <in>clstuff.cpp</in>
+          <in>clstuff.h</in>
+          <in>clstuff.hpp</in>
           <in>main.cpp</in>
         </df>
         <df name="TerrainDemo">

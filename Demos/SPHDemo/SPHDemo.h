@@ -24,6 +24,9 @@ subject to the following restrictions:
 #endif
 
 #include "LinearMath/btAlignedObjectArray.h"
+#include "BulletCollision/CollisionDispatch/btCollisionObject.h"
+#include "BulletCollision/CollisionShapes/btConcaveShape.h"
+#include "BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h"
 #include <RTPS.h>
 
 class btBroadphaseInterface;
@@ -83,7 +86,7 @@ class SPHDemo : public PlatformDemoApplication
 
 	virtual void clientMoveAndDisplay();
 
-        virtual void voxelizeMesh(btCollisionShape* shape, int voxelResolution);
+        void voxelizeMesh(btCollisionObject* shape, int voxelResolution);
 	virtual void displayCallback();
 	virtual void	clientResetScene();
         virtual void    renderme();
