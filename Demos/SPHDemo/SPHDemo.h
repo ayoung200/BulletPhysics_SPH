@@ -66,6 +66,7 @@ class SPHDemo : public PlatformDemoApplication
 	SPHDemo()
 	{
             m_voxelizedMesh=false;
+            m_rtps = NULL;
 	}
         
         SPHDemo(int numParticles, float timestep=0.003f)
@@ -73,6 +74,7 @@ class SPHDemo : public PlatformDemoApplication
             m_numParticles=numParticles;
             m_timestep = timestep;
             m_voxelizedMesh=false;
+            m_rtps = NULL;
         }
 	virtual ~SPHDemo()
 	{

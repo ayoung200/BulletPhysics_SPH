@@ -1035,6 +1035,7 @@
                   <in>cl_macros.h</in>
                   <in>cl_structs.h</in>
                   <in>hash.cl</in>
+                  <in>meshtoparticles.cl</in>
                   <in>permute.cl</in>
                 </df>
                 <df name="cl_flock">
@@ -3277,7 +3278,7 @@
           <buildCommandWorkingDir>build</buildCommandWorkingDir>
           <buildCommand>${MAKE} -j8 -f Makefile</buildCommand>
           <cleanCommand>${MAKE} -j8 -f Makefile clean</cleanCommand>
-          <executablePath></executablePath>
+          <executablePath>build/Demos/SPHDemo/AppSPHDemo</executablePath>
         </makeTool>
       </makefileType>
       <item path="Demos/DX11ClothDemo/cloth_renderer_PS.hlsl"

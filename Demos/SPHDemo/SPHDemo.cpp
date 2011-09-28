@@ -15,18 +15,18 @@ subject to the following restrictions:
 
 
 ///create 125 (5x5x5) dynamic object
-#define ARRAY_SIZE_X 2
-#define ARRAY_SIZE_Y 2
-#define ARRAY_SIZE_Z 2
+#define ARRAY_SIZE_X 1
+#define ARRAY_SIZE_Y 1
+#define ARRAY_SIZE_Z 1
 
 //maximum number of objects (and allow user to shoot additional boxes)
 #define MAX_PROXIES (ARRAY_SIZE_X*ARRAY_SIZE_Y*ARRAY_SIZE_Z + 1024)
 
 ///scaling of the objects (0.1 = 20 centimeter boxes )
 #define SCALING 1.
-#define START_POS_X -5
-#define START_POS_Y -5
-#define START_POS_Z -10
+#define START_POS_X 5
+#define START_POS_Y 5
+#define START_POS_Z 5
 
 #include <GL/glew.h>
 #include "SPHDemo.h"
@@ -156,10 +156,8 @@ void	SPHDemo::initPhysics()
 	{
 		//create a few dynamic rigidbodies
 		// Re-using the same collision is better for memory usage and performance
-            printf("Here at %s:%d\n",__FILE__,__LINE__);
             for(int i = 0; i<BUNNY_NUM_TRIANGLES;i++)
             {
-                printf("i = %d\n",i);
                 gIndices[(i*3)]=gIndicesBunny[i][0];
                 gIndices[(i*3)+1]=gIndicesBunny[i][1];
                 gIndices[(i*3)+2]=gIndicesBunny[i][2];
@@ -171,17 +169,12 @@ void	SPHDemo::initPhysics()
                 mesh->m_triangleIndexStride = 3*sizeof(int);
                 mesh->m_vertexBase = (unsigned char*)gVerticesBunny;
                 mesh->m_vertexStride = 3*sizeof(btScalar);
-                printf("Here at %s:%d\n",__FILE__,__LINE__);
                 btTriangleIndexVertexArray* tmesh = new btTriangleIndexVertexArray();
-                printf("Here at %s:%d\n",__FILE__,__LINE__);
                 tmesh->addIndexedMesh(*mesh);
 		//btCollisionShape* colShape = new btBoxShape(btVector3(SCALING*1,SCALING*1,SCALING*1));
 		//btCollisionShape* colShape = new btSphereShape(btScalar(1.));
-                printf("Here at %s:%d\n",__FILE__,__LINE__);
                 btCollisionShape* colShape = new btBvhTriangleMeshShape(tmesh,false);
-                printf("Here at %s:%d\n",__FILE__,__LINE__);
 		m_collisionShapes.push_back(colShape);
-printf("Here at %s:%d\n",__FILE__,__LINE__);
 		/// Create Dynamic Objects
 		btTransform startTransform;
 		startTransform.setIdentity();
@@ -207,7 +200,7 @@ printf("Here at %s:%d\n",__FILE__,__LINE__);
 				{
 					startTransform.setOrigin(SCALING*btVector3(
 										btScalar(2.0*i + start_x),
-										btScalar(20+2.0*k + start_y),
+										btScalar(6+2.0*k + start_y),
 										btScalar(2.0*j + start_z)));
 
 			
@@ -222,7 +215,6 @@ printf("Here at %s:%d\n",__FILE__,__LINE__);
 			}
 		}
 	}
-printf("Here at %s:%d\n",__FILE__,__LINE__);
 
 }
 
@@ -233,10 +225,10 @@ printf("Here at %s:%d\n",__FILE__,__LINE__);
 void    SPHDemo::myinit()
 {
     DemoApplication::myinit();
+
     if(!m_rtps)
     {
-printf("Here at %s:%d\n",__FILE__,__LINE__);
-        rtps::Domain* grid = new rtps::Domain(rtps::float4(0,0,0,0), rtps::float4(5, 5, 5, 0));
+        rtps::Domain* grid = new rtps::Domain(rtps::float4(0,0,0,0), rtps::float4(10, 10, 10, 0));
         rtps::RTPSettings* settings = new rtps::RTPSettings(rtps::RTPSettings::SPH, m_numParticles, m_timestep, grid);
     
 
@@ -248,7 +240,6 @@ printf("Here at %s:%d\n",__FILE__,__LINE__);
             settings->SetSetting("rtps_path", "/home/andrew/School/Research/Bullet/BulletPhysics_SPH/Demos/SPHDemo/EnjaParticles/build/bin/");
         #endif
 
-printf("Here at %s:%d\n",__FILE__,__LINE__);
         settings->setRenderType(rtps::RTPSettings::SCREEN_SPACE_RENDER);
         //settings->setRenderType(rtps::RTPSettings::RENDER);
         //settings.setRenderType(RTPSettings::SPRITE_RENDER);
@@ -282,13 +273,11 @@ printf("Here at %s:%d\n",__FILE__,__LINE__);
         rtps::float4 color = rtps::float4(0.f, .5f,.75f, .05f);
         m_rtps->system->addBox(m_numParticles/2, min, max, false,color);
     }
-printf("Here at %s:%d\n",__FILE__,__LINE__);
     if(!m_voxelizedMesh)
     {
-        voxelizeMesh(m_dynamicsWorld->getCollisionObjectArray().at(1),256);
+        voxelizeMesh(m_dynamicsWorld->getCollisionObjectArray().at(1),32);
         m_voxelizedMesh=true;    
     }
-printf("Here at %s:%d\n",__FILE__,__LINE__);
 }
 
 void	SPHDemo::clientResetScene()
@@ -347,27 +336,33 @@ void SPHDemo::voxelizeMesh(btCollisionObject* colObj, int voxelResolution)
         btVector3 dim = (max-min)*btScalar(2.0);
         //printf("dim = (%f,%f,%f)\n",dim.x(),dim.y(),dim.z());
         
-printf("Here at %s:%d\n",__FILE__,__LINE__);
-        
-        glEnable(GL_TEXTURE_3D);
-        GLuint tex;
+        printf("3d texture supported? %d\n",glewIsSupported("GL_EXT_texture3D"));
+        glEnable(GL_TEXTURE_3D_EXT);
+        //glEnable(GL_DRAW_BUFFER);
+        //glEnable(GL_FRAMEBUFFER);
+        GLuint tex=0;
         glGenTextures(1, &tex);
-        glBindTexture(GL_TEXTURE_3D, tex);
-        glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-        glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+        printf("tex = %d\n",tex);
+        glBindTexture(GL_TEXTURE_3D_EXT, tex);
+        glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
+        glTexParameteri(GL_TEXTURE_3D_EXT, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+        glTexParameteri(GL_TEXTURE_3D_EXT, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
         GLint mode = GL_CLAMP_TO_BORDER;
-        glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_S, mode);
-        glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_T, mode);
-        glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_R, mode);
-        glTexImage3D(GL_TEXTURE_3D, 0, GL_RGBA, voxelResolution, voxelResolution, voxelResolution, 0, GL_RGBA, GL_BYTE, 0);
+        glTexParameteri(GL_TEXTURE_3D_EXT, GL_TEXTURE_WRAP_S, mode);
+        glTexParameteri(GL_TEXTURE_3D_EXT, GL_TEXTURE_WRAP_T, mode);
+        glTexParameteri(GL_TEXTURE_3D_EXT, GL_TEXTURE_WRAP_R, mode);
+        //img is for debugging
+        //unsigned char img[voxelResolution*voxelResolution*voxelResolution*4];
+        //memset(img,0,sizeof(unsigned char)*voxelResolution*voxelResolution*voxelResolution*4);
+        glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+        glTexImage3DEXT(GL_TEXTURE_3D_EXT, 0, GL_RGBA, voxelResolution, voxelResolution, voxelResolution, 0, GL_RGBA, GL_UNSIGNED_BYTE, 0);//img);
         GLuint fboId = 0;
         glGenFramebuffersEXT(1, &fboId);
-        glBindFramebufferEXT(GL_FRAMEBUFFER_EXT,fboId);
-        glFramebufferTexture3DEXT( GL_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT ,
-                               GL_TEXTURE_3D, tex, 0, 0 );
+        glBindFramebufferEXT(GL_DRAW_FRAMEBUFFER_EXT,fboId);
+        //glFramebufferTexture3DEXT( GL_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT , GL_TEXTURE_3D_EXT, tex, 0, 0 );
         float col[4];
         glGetFloatv(GL_COLOR_CLEAR_VALUE,col);
-	glClearColor(0.0f,0.0f,0.0f,0.0f);
+	glClearColor(0.0f,0.0f,0.0f,1.0f);
 
         btScalar maxDim = max.x();
         if(maxDim<max.y())
@@ -386,10 +381,49 @@ printf("Here at %s:%d\n",__FILE__,__LINE__);
         glDisable(GL_LIGHTING);
         glDisable(GL_DEPTH_TEST);
         glDisable(GL_CULL_FACE);
-        unsigned long int start = clk.getTimeMilliseconds();
         glViewport(0,0,voxelResolution,voxelResolution);
+        glFramebufferTextureLayer( GL_DRAW_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT , tex, 0, i );
+        GLenum status = glCheckFramebufferStatus(GL_DRAW_FRAMEBUFFER_EXT);
+        if(status!=GL_FRAMEBUFFER_COMPLETE)
+        {
+            switch(status)
+            {
+                case GL_FRAMEBUFFER_UNDEFINED:
+                    printf("Here LINE %d\n",__LINE__);
+                    break;
+                case GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT:
+                    printf("Here LINE %d\n",__LINE__);
+                    break;
+                case GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT:
+                    printf("Here LINE %d\n",__LINE__);
+                    break;
+                case GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER:
+                    printf("Here LINE %d\n",__LINE__);
+                    break;
+                case GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER:
+                    printf("Here LINE %d\n",__LINE__);
+                    break;
+                case GL_FRAMEBUFFER_INCOMPLETE_LAYER_TARGETS:       
+                    printf("Here LINE %d\n",__LINE__);
+                    break;
+                default:
+                    printf("WTF??\n");
+                    break;
+            }
+        }
+        else
+        {
+            printf("FRAMEBUFFER is complete.\n");
+        }
+        unsigned long int start = clk.getTimeMilliseconds();
+        m_shapeDrawer->enableTexture(false);
         for(int i = 0; i<voxelResolution; i++)
         {
+            glFramebufferTextureLayer( GL_DRAW_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT , tex, 0, i );
+            glDrawBuffer(GL_AUX0);
+            glClear(GL_COLOR_BUFFER_BIT);
+            glFramebufferTextureLayer(GL_READ_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT1_EXT, tex, 0, i?i-1:0);
+            glReadBuffer(GL_AUX1);
             // switch to projection mode
             glMatrixMode(GL_PROJECTION);
             // save previous matrix which contains the 
@@ -397,13 +431,6 @@ printf("Here at %s:%d\n",__FILE__,__LINE__);
             glPushMatrix();
             // reset matrix
             glLoadIdentity();
-            glFramebufferTexture3DEXT( GL_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT ,
-                               GL_TEXTURE_3D, tex, 0, i );
-            glDrawBuffer(GL_COLOR_ATTACHMENT0_EXT);
-            glClear(GL_COLOR_BUFFER_BIT);
-            glFramebufferTexture3DEXT(GL_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT1_EXT,
-                                GL_TEXTURE_3D, tex, 0, i?i-1:0);
-            glReadBuffer(GL_COLOR_ATTACHMENT1_EXT);
             // set a 2D orthographic projection
             //glOrtho(0, maxDim, 0, maxDim,delz*i*maxDim,delz*(i+1)*maxDim);
             glOrtho(-maxDim, maxDim, -maxDim, maxDim ,-maxDim+delz*i ,-maxDim+delz*(i+1));
@@ -420,6 +447,7 @@ printf("Here at %s:%d\n",__FILE__,__LINE__);
             glMatrixMode(GL_PROJECTION);
             glPopMatrix();
         }
+        m_shapeDrawer->enableTexture(true);
         glViewport(0,0,m_glutScreenWidth,m_glutScreenHeight);
         glEnable(GL_DEPTH_TEST);
         glEnable(GL_LIGHTING);
@@ -432,22 +460,22 @@ printf("Here at %s:%d\n",__FILE__,__LINE__);
         //glDrawBuffer(0);
         //glReadBuffer(0);
         glClearColor(col[0],col[1],col[2],col[3]);
-        glDisable(GL_TEXTURE_3D);
         glMatrixMode(GL_MODELVIEW);
-printf("Here at %s:%d\n",__FILE__,__LINE__);
         rtps::float4 ext = rtps::float4(dim.x(),dim.y(),dim.z(),0.0);
         rtps::float4 minimum = rtps::float4(min.x(),min.y(),min.z(),0.0);
         btRigidBody*		body=btRigidBody::upcast(colObj);
         btScalar m[16];
-printf("Here at %s:%d\n",__FILE__,__LINE__);
         if(body&&body->getMotionState())
         {
             btDefaultMotionState* myMotionState = (btDefaultMotionState*)body->getMotionState();
             myMotionState->m_startWorldTrans.getOpenGLMatrix(m);
             
         }
-printf("Here at %s:%d\n",__FILE__,__LINE__);
-        m_rtps->system->addRigidBody(tex,ext,minimum,m,voxelResolution);
-printf("Here at %s:%d\n",__FILE__,__LINE__);
+        rtps::float16 m2;
+        memcpy(m,m2.m,sizeof(rtps::float16));
+        m_rtps->system->addRigidBody(tex,ext,minimum,m2,voxelResolution);
+        glDeleteTextures(1,&tex);
+        glDeleteFramebuffersEXT(1,&fboId);
+        glDisable(GL_TEXTURE_3D_EXT);
         printf("time to voxelize = %ld\n",end-start);
 }

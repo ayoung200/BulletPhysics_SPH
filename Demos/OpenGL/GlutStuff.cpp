@@ -14,7 +14,6 @@ subject to the following restrictions:
 */
 
 #ifndef _WINDOWS
-
 #include "DemoApplication.h"
 
 //glut is C code, this global gDemoApplication links glut to the C++ demo

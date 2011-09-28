@@ -13,6 +13,7 @@
 
 
 
+SET( CMAKE_MODULE_PATH ${BULLET_PHYSICS_SOURCE_DIR}/Demos/SPHDemo/EnjaParticles/cmake)
 INCLUDE_DIRECTORIES(
 ${BULLET_PHYSICS_SOURCE_DIR}/src ${BULLET_PHYSICS_SOURCE_DIR}/Extras/ConvexHull  
 )
@@ -49,9 +50,9 @@ ADD_LIBRARY(OpenGLSupport
 		Win32DemoApplication.h
 )
 
-
+FIND_PACKAGE(GLEW)
 IF (BUILD_SHARED_LIBS)
-  TARGET_LINK_LIBRARIES(OpenGLSupport BulletDynamics BulletCollision ${GLUT_glut_LIBRARY} ${OPENGL_gl_LIBRARY} ${OPENGL_glu_LIBRARY})
+  TARGET_LINK_LIBRARIES(OpenGLSupport BulletDynamics BulletCollision ${GLUT_glut_LIBRARY} ${OPENGL_gl_LIBRARY} ${OPENGL_glu_LIBRARY} ${GLEW_LIBRARY})
 ENDIF (BUILD_SHARED_LIBS)
 
 #INSTALL of other files requires CMake 2.6
