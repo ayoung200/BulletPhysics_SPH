@@ -26,7 +26,7 @@ static GLDebugDrawer sDebugDraw;
 int main(int argc,char** argv)
 {
 
-	SPHDemo ccdDemo(16384);
+	SPHDemo ccdDemo(65536);
 	ccdDemo.initPhysics();
 	ccdDemo.getDynamicsWorld()->setDebugDrawer(&sDebugDraw);
 

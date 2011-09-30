@@ -25,7 +25,7 @@ subject to the following restrictions:
 ///scaling of the objects (0.1 = 20 centimeter boxes )
 #define SCALING 1.
 #define START_POS_X 5
-#define START_POS_Y 5
+#define START_POS_Y 3
 #define START_POS_Z 5
 
 #include <GL/glew.h>
@@ -37,10 +37,11 @@ subject to the following restrictions:
 //#include <RTPSettings.h>
 #include "../GimpactTestDemo/BunnyMesh.h"
 
-static int gIndices[BUNNY_NUM_TRIANGLES*3];
+static GLuint gIndices[BUNNY_NUM_TRIANGLES*3];
 
 
 #include <stdio.h> //printf debugging
+#include "stb_image_write.h"
 
 
 void SPHDemo::clientMoveAndDisplay()
@@ -173,7 +174,7 @@ void	SPHDemo::initPhysics()
                 tmesh->addIndexedMesh(*mesh);
 		//btCollisionShape* colShape = new btBoxShape(btVector3(SCALING*1,SCALING*1,SCALING*1));
 		//btCollisionShape* colShape = new btSphereShape(btScalar(1.));
-                btCollisionShape* colShape = new btBvhTriangleMeshShape(tmesh,false);
+        btCollisionShape* colShape = new btBvhTriangleMeshShape(tmesh,false);
 		m_collisionShapes.push_back(colShape);
 		/// Create Dynamic Objects
 		btTransform startTransform;
@@ -200,7 +201,7 @@ void	SPHDemo::initPhysics()
 				{
 					startTransform.setOrigin(SCALING*btVector3(
 										btScalar(2.0*i + start_x),
-										btScalar(6+2.0*k + start_y),
+										btScalar(5+2.0*k + start_y),
 										btScalar(2.0*j + start_z)));
 
 			
@@ -240,8 +241,8 @@ void    SPHDemo::myinit()
             settings->SetSetting("rtps_path", "/home/andrew/School/Research/Bullet/BulletPhysics_SPH/Demos/SPHDemo/EnjaParticles/build/bin/");
         #endif
 
-        settings->setRenderType(rtps::RTPSettings::SCREEN_SPACE_RENDER);
-        //settings->setRenderType(rtps::RTPSettings::RENDER);
+        //settings->setRenderType(rtps::RTPSettings::SCREEN_SPACE_RENDER);
+        settings->setRenderType(rtps::RTPSettings::RENDER);
         //settings.setRenderType(RTPSettings::SPRITE_RENDER);
         settings->setRadiusScale(0.4);
         settings->setBlurScale(1.0);
@@ -258,7 +259,8 @@ void    SPHDemo::myinit()
         //m_rtps = new rtps::RTPS();
 
 
-        m_rtps->settings->SetSetting("Gravity", -9.8f); // -9.8 m/sec^2
+        m_rtps->settings->SetSetting("Gravity",-1.0f); // -9.8 m/sec^2
+        //m_rtps->settings->SetSetting("Gravity", -9.8f); // -9.8 m/sec^2
         m_rtps->settings->SetSetting("Gas Constant", 1.0f);
         m_rtps->settings->SetSetting("Viscosity", .001f);
         m_rtps->settings->SetSetting("Velocity Limit", 600.0f);
@@ -271,11 +273,11 @@ void    SPHDemo::myinit()
         rtps::float4 min = rtps::float4(.1, .1, .1, 1.0f);
         rtps::float4 max = rtps::float4(3.9, 3.9, 3.9, 1.0f);
         rtps::float4 color = rtps::float4(0.f, .5f,.75f, .05f);
-        m_rtps->system->addBox(m_numParticles/2, min, max, false,color);
+        m_rtps->system->addBox(m_numParticles/4, min, max, false,color);
     }
     if(!m_voxelizedMesh)
     {
-        voxelizeMesh(m_dynamicsWorld->getCollisionObjectArray().at(1),32);
+        voxelizeMesh(m_dynamicsWorld->getCollisionObjectArray().at(1),64);
         m_voxelizedMesh=true;    
     }
 }
@@ -325,6 +327,33 @@ void	SPHDemo::exitPhysics()
 	delete m_collisionConfiguration;
 }
 
+void write3DTextureToDisc(GLuint tex,int voxelResolution, const char* filename)
+{
+    printf("writing %s texture to disc.\n",filename);
+    glBindTexture(GL_TEXTURE_3D_EXT,tex);
+    GLubyte* image = new GLubyte[voxelResolution*voxelResolution*voxelResolution*4];
+    //GLubyte* image = new GLubyte[voxelResolution*voxelResolution*voxelResolution*3];
+    glGetTexImage(GL_TEXTURE_3D_EXT,0,GL_RGBA,GL_UNSIGNED_BYTE,image);
+    //glGetTexImage(GL_TEXTURE_3D_EXT,0,GL_RGB,GL_UNSIGNED_BYTE,image);
+    GLubyte* tmp2Dimg = new GLubyte[voxelResolution*voxelResolution*4];
+    //GLubyte* tmp2Dimg = new GLubyte[voxelResolution*voxelResolution*3];
+    for(int i = 0; i<voxelResolution; i++)
+    {
+        char fname[128];
+        sprintf(fname,"%s-%03d.png",filename,i);
+        memcpy(tmp2Dimg,image+(i*(voxelResolution*voxelResolution*4)),sizeof(GLubyte)*voxelResolution*voxelResolution*4);
+        //memcpy(tmp2Dimg,image+(i*(voxelResolution*voxelResolution*3)),sizeof(GLubyte)*voxelResolution*voxelResolution*3);
+        if (!stbi_write_png(fname,voxelResolution,voxelResolution,4,(void*)tmp2Dimg,0))
+        //if (!stbi_write_png(fname,voxelResolution,voxelResolution,3,(void*)tmp2Dimg,0))
+        {
+            printf("failed to write image %s",filename);
+        }
+    }
+    glBindTexture(GL_TEXTURE_3D_EXT,0);
+    delete[] image;
+
+}
+
 void SPHDemo::voxelizeMesh(btCollisionObject* colObj, int voxelResolution)
 {
         btClock clk;
@@ -333,7 +362,7 @@ void SPHDemo::voxelizeMesh(btCollisionObject* colObj, int voxelResolution)
         shape->getAabb(btTransform::getIdentity(),min,max);
         printf("min = (%f,%f,%f)\n",min.x(),min.y(),min.z());
         printf("max = (%f,%f,%f)\n",max.x(),max.y(),max.z());
-        btVector3 dim = (max-min)*btScalar(2.0);
+        btVector3 dim = (max-min);
         //printf("dim = (%f,%f,%f)\n",dim.x(),dim.y(),dim.z());
         
         printf("3d texture supported? %d\n",glewIsSupported("GL_EXT_texture3D"));
@@ -356,13 +385,26 @@ void SPHDemo::voxelizeMesh(btCollisionObject* colObj, int voxelResolution)
         //memset(img,0,sizeof(unsigned char)*voxelResolution*voxelResolution*voxelResolution*4);
         glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
         glTexImage3DEXT(GL_TEXTURE_3D_EXT, 0, GL_RGBA, voxelResolution, voxelResolution, voxelResolution, 0, GL_RGBA, GL_UNSIGNED_BYTE, 0);//img);
+        GLuint depth=0;
+        glGenTextures(1, &depth);
+        glBindTexture(GL_TEXTURE_2D, depth);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexImage2D(GL_TEXTURE_2D,0,GL_DEPTH_COMPONENT32,voxelResolution,voxelResolution,0,GL_DEPTH_COMPONENT,GL_FLOAT,NULL);
+        
+        glViewport(0,0,voxelResolution,voxelResolution);
+
         GLuint fboId = 0;
         glGenFramebuffersEXT(1, &fboId);
-        glBindFramebufferEXT(GL_DRAW_FRAMEBUFFER_EXT,fboId);
-        //glFramebufferTexture3DEXT( GL_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT , GL_TEXTURE_3D_EXT, tex, 0, 0 );
+        glBindFramebufferEXT(GL_FRAMEBUFFER_EXT,fboId);
+        //glBindFramebufferEXT(GL_READ_FRAMEBUFFER_EXT,fboId);
+        glFramebufferTextureLayer( GL_DRAW_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT , tex, 0,0);
+        glFramebufferTexture2DEXT(GL_DRAW_FRAMEBUFFER_EXT,GL_DEPTH_ATTACHMENT_EXT,GL_TEXTURE_2D,depth,0);
         float col[4];
         glGetFloatv(GL_COLOR_CLEAR_VALUE,col);
-	glClearColor(0.0f,0.0f,0.0f,1.0f);
+        glClearColor(0.0f,0.0f,0.0f,0.0f);
 
         btScalar maxDim = max.x();
         if(maxDim<max.y())
@@ -375,14 +417,23 @@ void SPHDemo::voxelizeMesh(btCollisionObject* colObj, int voxelResolution)
         int i = 0;
         //FIXME: Code should check and preserve the current state so that
         //It correctly restores previous state.
-        glEnable(GL_BLEND);
+        glEnable(GL_COLOR_LOGIC_OP);
+        glEnablei(GL_BLEND,0);//GL_DRAW_BUFFER0);
+        //glBlendFunc(GL_SRC_COLOR,GL_DST_COLOR);
+        glLogicOp(GL_NOR);
         glBlendFunc(GL_ONE,GL_ONE);
-        glLogicOp(GL_XOR);
+        glDisable(GL_ALPHA_TEST);
+        glDisable(GL_POINT_SMOOTH);
+        glDisable(GL_LINE_SMOOTH);
+        
+        /*
+        **/
         glDisable(GL_LIGHTING);
         glDisable(GL_DEPTH_TEST);
         glDisable(GL_CULL_FACE);
-        glViewport(0,0,voxelResolution,voxelResolution);
-        glFramebufferTextureLayer( GL_DRAW_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT , tex, 0, i );
+        glDisable(GL_TEXTURE_2D);
+        glEnableClientState(GL_VERTEX_ARRAY);
+        
         GLenum status = glCheckFramebufferStatus(GL_DRAW_FRAMEBUFFER_EXT);
         if(status!=GL_FRAMEBUFFER_COMPLETE)
         {
@@ -416,19 +467,23 @@ void SPHDemo::voxelizeMesh(btCollisionObject* colObj, int voxelResolution)
             printf("FRAMEBUFFER is complete.\n");
         }
         unsigned long int start = clk.getTimeMilliseconds();
-        m_shapeDrawer->enableTexture(false);
+        glMatrixMode(GL_PROJECTION);
+        // save previous matrix which contains the 
+        //settings for the perspective projection
+        glPushMatrix();
+        glDrawBuffer(GL_COLOR_ATTACHMENT0_EXT);
+        glReadBuffer(GL_COLOR_ATTACHMENT1_EXT);
+        //m_shapeDrawer->enableTexture(false);
         for(int i = 0; i<voxelResolution; i++)
         {
             glFramebufferTextureLayer( GL_DRAW_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT , tex, 0, i );
-            glDrawBuffer(GL_AUX0);
             glClear(GL_COLOR_BUFFER_BIT);
             glFramebufferTextureLayer(GL_READ_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT1_EXT, tex, 0, i?i-1:0);
-            glReadBuffer(GL_AUX1);
-            // switch to projection mode
+            glBlitFramebuffer(0,0,voxelResolution,voxelResolution,
+                                0,0,voxelResolution,voxelResolution,
+                                GL_COLOR_BUFFER_BIT,GL_NEAREST);
             glMatrixMode(GL_PROJECTION);
-            // save previous matrix which contains the 
-            //settings for the perspective projection
-            glPushMatrix();
+            // switch to projection mode
             // reset matrix
             glLoadIdentity();
             // set a 2D orthographic projection
@@ -438,22 +493,46 @@ void SPHDemo::voxelizeMesh(btCollisionObject* colObj, int voxelResolution)
             glPushMatrix();
             glLoadIdentity();
 
-            glTranslatef(0.f,0.f,maxDim);
-            btScalar m[16];
-            btTransform::getIdentity().getOpenGLMatrix(m);
-            btVector3 a(btScalar(1.0),btScalar(1.0),btScalar(1.0));
-            m_shapeDrawer->drawOpenGL(m,shape,a,getDebugMode(),min,max);
+            //glTranslatef(0.f,0.f,-maxDim);
+            //btScalar m[16];
+            //btTransform::getIdentity().getOpenGLMatrix(m);
+            //btVector3 a(btScalar(1.0),btScalar(1.0),btScalar(1.0));
+            //m_shapeDrawer->drawOpenGL(m,shape,a,getDebugMode(),min,max);
+            glVertexPointer( 3,   //3 components per vertex (x,y,z)
+                 GL_FLOAT,
+                 sizeof(btScalar)*3,
+                 gVerticesBunny);
+            //glBegin();
+            glColor4f(1.0f,1.0f,1.0f,1.0f);
+            //glDrawElements( GL_TRIANGLE_STRIP, //mode
+            glDrawElements( GL_TRIANGLES, //mode
+                                        BUNNY_NUM_INDICES,  //count, ie. how many indices
+                                        //GL_INT, //type of the index array
+                                        GL_UNSIGNED_INT, //type of the index array
+                                        //gIndicesBunny);
+                                        gIndices);
+            //glEnd();
             glPopMatrix();
-            glMatrixMode(GL_PROJECTION);
-            glPopMatrix();
+            glFlush();
+            //glMatrixMode(GL_PROJECTION);
+            //glPopMatrix();
         }
-        m_shapeDrawer->enableTexture(true);
+        write3DTextureToDisc(tex,voxelResolution,"test");
+        //m_shapeDrawer->enableTexture(true);
         glViewport(0,0,m_glutScreenWidth,m_glutScreenHeight);
+        glDisableClientState(GL_VERTEX_ARRAY);
+        glEnable(GL_ALPHA_TEST);
+        glEnable(GL_TEXTURE_2D);
         glEnable(GL_DEPTH_TEST);
         glEnable(GL_LIGHTING);
         glDisable(GL_BLEND);
         glLogicOp(GL_COPY);
         glEnable(GL_CULL_FACE);
+        glDisable(GL_COLOR_LOGIC_OP);
+        /*
+        */
+        glMatrixMode(GL_PROJECTION);
+        glPopMatrix();
         unsigned long int end = clk.getTimeMilliseconds();
 //printf("Here at %s:%d\n",__FILE__,__LINE__);
         glBindFramebufferEXT(GL_FRAMEBUFFER_EXT,0);
@@ -468,11 +547,18 @@ void SPHDemo::voxelizeMesh(btCollisionObject* colObj, int voxelResolution)
         if(body&&body->getMotionState())
         {
             btDefaultMotionState* myMotionState = (btDefaultMotionState*)body->getMotionState();
-            myMotionState->m_startWorldTrans.getOpenGLMatrix(m);
-            
+            btTransform offset;
+            myMotionState->getWorldTransform(offset);
+            offset.getOpenGLMatrix(m);
         }
         rtps::float16 m2;
-        memcpy(m,m2.m,sizeof(rtps::float16));
+        //NOTE: Should we need to transpose the matrix?
+        for(int i =0;i<4;i++){
+            for(int j = 0; j<4; j++){
+                m2.m[j+i*4]= m[i+j*4];
+            }
+        }
+        //memcpy(m2.m,m,sizeof(rtps::float16));
         m_rtps->system->addRigidBody(tex,ext,minimum,m2,voxelResolution);
         glDeleteTextures(1,&tex);
         glDeleteFramebuffersEXT(1,&fboId);
