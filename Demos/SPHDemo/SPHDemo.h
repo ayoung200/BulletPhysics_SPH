@@ -24,6 +24,7 @@ subject to the following restrictions:
 #endif
 
 #include "LinearMath/btAlignedObjectArray.h"
+#include "LinearMath/btIDebugDraw.h"
 #include "BulletCollision/CollisionDispatch/btCollisionObject.h"
 #include "BulletCollision/CollisionShapes/btConcaveShape.h"
 #include "BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h"
@@ -75,6 +76,7 @@ class SPHDemo : public PlatformDemoApplication
             m_timestep = timestep;
             m_voxelizedMesh=false;
             m_rtps = NULL;
+            m_debugMode|=btIDebugDraw::DBG_DrawWireframe;
         }
 	virtual ~SPHDemo()
 	{

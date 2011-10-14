@@ -3,7 +3,7 @@
     <type>org.netbeans.modules.cnd.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>trunk</name>
+            <name>BulletPhysics_SPH</name>
             <c-extensions>c,m</c-extensions>
             <cpp-extensions>cc,cpp,mm</cpp-extensions>
             <header-extensions>cci,cl,cuh,h,hlsl,hpp,inl,mdl</header-extensions>

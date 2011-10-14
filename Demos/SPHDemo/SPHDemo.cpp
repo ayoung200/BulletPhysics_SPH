@@ -25,7 +25,7 @@ subject to the following restrictions:
 ///scaling of the objects (0.1 = 20 centimeter boxes )
 #define SCALING 1.
 #define START_POS_X 5
-#define START_POS_Y 3
+#define START_POS_Y 3 
 #define START_POS_Z 5
 
 #include <GL/glew.h>
@@ -210,7 +210,6 @@ void	SPHDemo::initPhysics()
 					btRigidBody::btRigidBodyConstructionInfo rbInfo(mass,myMotionState,colShape,localInertia);
 					btRigidBody* body = new btRigidBody(rbInfo);
 					
-
 					m_dynamicsWorld->addRigidBody(body);
 				}
 			}
@@ -243,6 +242,7 @@ void    SPHDemo::myinit()
 
         //settings->setRenderType(rtps::RTPSettings::SCREEN_SPACE_RENDER);
         settings->setRenderType(rtps::RTPSettings::RENDER);
+        //settings->setRenderType(rtps::RTPSettings::SPHERE3D_RENDER);
         //settings.setRenderType(RTPSettings::SPRITE_RENDER);
         settings->setRadiusScale(0.4);
         settings->setBlurScale(1.0);
@@ -253,13 +253,13 @@ void    SPHDemo::myinit()
         //settings->SetSetting("render_use_alpha", false);
         settings->SetSetting("render_alpha_function", "add");
         settings->SetSetting("lt_increment", -.00);
-        settings->SetSetting("lt_cl", "lifetime.cl");
+        //settings->SetSetting("lt_cl", "lifetime.cl");
 
         m_rtps = new rtps::RTPS(settings);
         //m_rtps = new rtps::RTPS();
 
 
-        m_rtps->settings->SetSetting("Gravity",-1.0f); // -9.8 m/sec^2
+        m_rtps->settings->SetSetting("Gravity",-9.8f); // -9.8 m/sec^2
         //m_rtps->settings->SetSetting("Gravity", -9.8f); // -9.8 m/sec^2
         m_rtps->settings->SetSetting("Gas Constant", 1.0f);
         m_rtps->settings->SetSetting("Viscosity", .001f);
@@ -272,12 +272,13 @@ void    SPHDemo::myinit()
         //int nn = 2048;
         rtps::float4 min = rtps::float4(.1, .1, .1, 1.0f);
         rtps::float4 max = rtps::float4(3.9, 3.9, 3.9, 1.0f);
-        rtps::float4 color = rtps::float4(0.f, .5f,.75f, .05f);
-        m_rtps->system->addBox(m_numParticles/4, min, max, false,color);
+        //rtps::float4 color = rtps::float4(0.f, .5f,.75f, .05f);
+        rtps::float4 color = rtps::float4(0.f, .5f,.75f, .5f);
+        m_rtps->system->addBox(m_numParticles/8, min, max, false,color);
     }
     if(!m_voxelizedMesh)
     {
-        voxelizeMesh(m_dynamicsWorld->getCollisionObjectArray().at(1),64);
+        voxelizeMesh(m_dynamicsWorld->getCollisionObjectArray().at(1),8);
         m_voxelizedMesh=true;    
     }
 }
@@ -362,9 +363,29 @@ void SPHDemo::voxelizeMesh(btCollisionObject* colObj, int voxelResolution)
         shape->getAabb(btTransform::getIdentity(),min,max);
         printf("min = (%f,%f,%f)\n",min.x(),min.y(),min.z());
         printf("max = (%f,%f,%f)\n",max.x(),max.y(),max.z());
-        btVector3 dim = (max-min);
-        //printf("dim = (%f,%f,%f)\n",dim.x(),dim.y(),dim.z());
+        btVector3 dim = (max-min);//*btScalar(4.0);
         
+        /*btScalar maxDim = max.x();
+        if(maxDim<max.y())
+            maxDim=max.y();
+        if(maxDim<max.z())
+            maxDim=max.z();
+         */
+        btScalar maxDim = dim.x();
+        if(maxDim<dim.y())
+            maxDim=dim.y();
+        if(maxDim<dim.z())
+            maxDim=dim.z();
+
+        float spacing = m_rtps->settings->GetSettingAs<float>("Spacing");
+        printf("addRigidBody spacing %08f\n",spacing);
+        printf("voxelResolution before recalculation %d\n",voxelResolution);
+        voxelResolution = (int)((maxDim)/btScalar(spacing));
+        //voxelResolution = (int)((maxDim*btScalar(2.0))/btScalar(spacing));
+        printf("voxelResolution after recalculation %d\n",voxelResolution);
+        //printf("dim = (%f,%f,%f)\n",dim.x(),dim.y(),dim.z());
+        btScalar halfMaxDim = maxDim/btScalar(2.0);
+       
         printf("3d texture supported? %d\n",glewIsSupported("GL_EXT_texture3D"));
         glEnable(GL_TEXTURE_3D_EXT);
         //glEnable(GL_DRAW_BUFFER);
@@ -406,14 +427,9 @@ void SPHDemo::voxelizeMesh(btCollisionObject* colObj, int voxelResolution)
         glGetFloatv(GL_COLOR_CLEAR_VALUE,col);
         glClearColor(0.0f,0.0f,0.0f,0.0f);
 
-        btScalar maxDim = max.x();
-        if(maxDim<max.y())
-            maxDim=max.y();
-        if(maxDim<max.z())
-            maxDim=max.z();
         
 
-        double delz = (2.0*maxDim)/voxelResolution;
+        double delz = spacing;//(2.0*maxDim)/voxelResolution;
         int i = 0;
         //FIXME: Code should check and preserve the current state so that
         //It correctly restores previous state.
@@ -488,7 +504,7 @@ void SPHDemo::voxelizeMesh(btCollisionObject* colObj, int voxelResolution)
             glLoadIdentity();
             // set a 2D orthographic projection
             //glOrtho(0, maxDim, 0, maxDim,delz*i*maxDim,delz*(i+1)*maxDim);
-            glOrtho(-maxDim, maxDim, -maxDim, maxDim ,-maxDim+delz*i ,-maxDim+delz*(i+1));
+            glOrtho(-halfMaxDim, halfMaxDim, -halfMaxDim, halfMaxDim ,-halfMaxDim+delz*i ,-halfMaxDim+delz*(i+1));
             glMatrixMode(GL_MODELVIEW);
             glPushMatrix();
             glLoadIdentity();
@@ -517,7 +533,7 @@ void SPHDemo::voxelizeMesh(btCollisionObject* colObj, int voxelResolution)
             //glMatrixMode(GL_PROJECTION);
             //glPopMatrix();
         }
-        write3DTextureToDisc(tex,voxelResolution,"test");
+        //write3DTextureToDisc(tex,voxelResolution,"test");
         //m_shapeDrawer->enableTexture(true);
         glViewport(0,0,m_glutScreenWidth,m_glutScreenHeight);
         glDisableClientState(GL_VERTEX_ARRAY);
@@ -534,13 +550,14 @@ void SPHDemo::voxelizeMesh(btCollisionObject* colObj, int voxelResolution)
         glMatrixMode(GL_PROJECTION);
         glPopMatrix();
         unsigned long int end = clk.getTimeMilliseconds();
+        printf("time to voxelize = %ld ms\n",end-start);
 //printf("Here at %s:%d\n",__FILE__,__LINE__);
         glBindFramebufferEXT(GL_FRAMEBUFFER_EXT,0);
         //glDrawBuffer(0);
         //glReadBuffer(0);
         glClearColor(col[0],col[1],col[2],col[3]);
         glMatrixMode(GL_MODELVIEW);
-        rtps::float4 ext = rtps::float4(dim.x(),dim.y(),dim.z(),0.0);
+        //rtps::float4 ext = rtps::float4(dim.x(),dim.y(),dim.z(),0.0);
         rtps::float4 minimum = rtps::float4(min.x(),min.y(),min.z(),0.0);
         btRigidBody*		body=btRigidBody::upcast(colObj);
         btScalar m[16];
@@ -559,9 +576,9 @@ void SPHDemo::voxelizeMesh(btCollisionObject* colObj, int voxelResolution)
             }
         }
         //memcpy(m2.m,m,sizeof(rtps::float16));
-        m_rtps->system->addRigidBody(tex,ext,minimum,m2,voxelResolution);
+        m_rtps->system->addRigidBody(tex,maxDim,minimum,m2,voxelResolution);
         glDeleteTextures(1,&tex);
         glDeleteFramebuffersEXT(1,&fboId);
         glDisable(GL_TEXTURE_3D_EXT);
-        printf("time to voxelize = %ld\n",end-start);
+        printf("time to fill rigidbody = %ld ms\n",clk.getTimeMilliseconds()-end);
 }
